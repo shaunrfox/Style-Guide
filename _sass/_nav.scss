@@ -1,0 +1,96 @@
+/*
+ * * * * * * * * * * * * * * * * * * *
+ * NAVIGATION
+ * * * * * * * * * * * * * * * * * * *
+ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: $off-white;
+  border-right: 1px solid $mid-grey;
+  z-index: 1000;
+
+  h1 {
+    margin: 0;
+    @include font-size(2);
+    font-weight: 600;
+
+    a {
+      display: block;
+      height: 70px;
+      padding-right: 20px;
+      padding-left: 60px;
+      background: lighten($blue, 5);
+      color: $white;
+      line-height: 70px;
+      text-shadow: 1px 1px 1px rgba($off-black, .2);
+      text-decoration: none;
+      @include transition(all ease 200ms);
+      border-bottom: 1px solid darken($blue, 15);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: lighten($blue, 8);
+        outline: none;
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    width: 100%;
+    @include unstyled-list();
+
+    li {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid $light-grey;
+
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 45px;
+        color: $off-black;
+        line-height: 45px;
+        padding: 0 15px;
+        opacity: .7;
+        @include transition(all ease 200ms);
+        overflow: hidden;
+
+        &.active,
+        &:hover {
+          opacity: 1;
+          color: $black;
+          background: lighten($off-white, 5);
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background: lighten($blue, 52);
+          outline: none;
+          text-decoration: none;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.bypass-logo {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  fill: $orange;
+}
