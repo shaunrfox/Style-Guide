@@ -620,38 +620,46 @@ pre {
  * LAYOUT
  * * * * * * * * * * * * * * * * * * *
  */
-section {
+.page-content {
+  width: 100%;
+  height: 100%; }
+  .page-content .wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 300px; }
+
+section.post,
+section.intro {
   margin-bottom: 50px; }
-  section h2 {
+  section.post .post-title,
+  section.intro .post-title {
     width: 100%;
-    height: 71px;
-    line-height: 67px;
-    margin: -1px 0 0 0;
-    background: #fff;
+    height: 70px;
+    margin-top: -1px;
     padding: 0 40px;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc; }
-  section .section-contents {
+    border-bottom: 1px solid #ccc;
+    background: #fff; }
+    section.post .post-title h2,
+    section.intro .post-title h2 {
+      line-height: 70px;
+      font-weight: 400;
+      margin: 0;
+      color: #00a3cc; }
+  section.post .post-content,
+  section.intro .post-content {
     width: 850px;
     padding: 20px 40px; }
-  section#intro p {
-    font-size: 25px; }
-  section:last-child {
+  section.post:last-child,
+  section.intro:last-child {
     margin-bottom: 100px; }
 
-.main-wrapper {
-  border-left: 10px solid rgba(6, 102, 142, 0);
-  border-right: 10px solid rgba(6, 102, 142, 0);
-  padding-bottom: 30px; }
+section.intro p {
+  font-size: 25px;
+  font-size: 2.5rem; }
 
-.main-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 300px; }
-
-.note {
+p {
   position: relative;
   margin: 10px 0 30px; }
 
@@ -702,19 +710,6 @@ li {
     content: '';
     display: table;
     clear: both; }
-  .example .modal {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1;
-    display: block;
-    z-index: 1 !important; }
-  .example .modal-content {
-    box-shadow: 2px 2px 2px rgba(17, 17, 17, 0.2);
-    -moz-box-shadow: 2px 2px 2px rgba(17, 17, 17, 0.2);
-    -webkit-box-shadow: 2px 2px 2px rgba(17, 17, 17, 0.2); }
 
 /*
  * * * * * * * * * * * * * * * * * * *
@@ -730,17 +725,15 @@ nav {
   background: #eee;
   border-right: 1px solid #aaa;
   z-index: 1000; }
-  nav h1 {
+  nav header {
     margin: 0;
     font-size: 20px;
-    font-size: 2rem;
-    font-weight: 600; }
-    nav h1 a {
+    font-size: 2rem; }
+    nav header a {
       display: block;
       height: 70px;
-      padding-right: 20px;
-      padding-left: 60px;
-      background: #0778a6;
+      padding: 0 20px;
+      background: #00a3cc;
       color: #fff;
       line-height: 70px;
       text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.2);
@@ -749,9 +742,9 @@ nav {
       -moz-transition: all ease 200ms;
       -o-transition: all ease 200ms;
       transition: all ease 200ms;
-      border-bottom: 1px solid #033145; }
-      nav h1 a:hover, nav h1 a:active, nav h1 a:focus {
-        background: #0882b5;
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4); }
+      nav header a:hover, nav header a:active, nav header a:focus {
+        background: #33b5d6;
         outline: none;
         color: #fff;
         text-decoration: none; }
@@ -787,34 +780,24 @@ nav {
         position: relative;
         display: block;
         width: 100%;
-        height: 45px;
+        min-height: 45px;
         color: #111;
-        line-height: 45px;
-        padding: 0 15px;
+        padding: 13px 15px 12px 15px;
         opacity: .7;
         -webkit-transition: all ease 200ms;
         -moz-transition: all ease 200ms;
         -o-transition: all ease 200ms;
         transition: all ease 200ms;
-        overflow: hidden; }
-        nav ul li a.active, nav ul li a:hover {
+        overflow: hidden;
+        text-decoration: none;
+        background: #eee; }
+        nav ul li a.active, nav ul li a:active, nav ul li a:hover {
           opacity: 1;
           color: #000;
-          background: #fbfbfb;
+          background: #f7f7f7;
           text-decoration: none; }
-        nav ul li a:hover, nav ul li a:active, nav ul li a:focus {
-          background: #a2e1fb;
-          outline: none;
-          text-decoration: none;
-          color: #000; }
-
-.bypass-logo {
-  position: absolute;
-  top: 18px;
-  left: 15px;
-  width: 35px;
-  height: 35px;
-  fill: #f15b40; }
+        nav ul li a:focus {
+          outline: none; }
 
 /* GitHub Theme */
 /* Pretty printing styles. Used with prettify.js. */

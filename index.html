@@ -2,22 +2,25 @@
 layout: default
 ---
 
-<div class="home">
+<section id="intro" class="intro">
+  <header class="post-title">
+    <h2>Introduction</h2>
+  </header>
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="post-content">
+    <p>This site is meant to help us unify our front-end code. These are the documented best-practises for front-end code structure. Grab the HAML code for the feature you’re building and just plug in the data.</p>
+  </div>
+</section>
 
-  <ul class="post-list">
+  <div class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <section id="{{ post.slug }}" class="post">
+        <header class="post-title">
+          <h2>{{ post.title }}</h2>
+        </header>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+        {{ content }}
+
+      </section>
     {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+  </div>
