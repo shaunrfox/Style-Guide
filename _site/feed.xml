@@ -4,10 +4,10 @@
     <title>Front-end Style Guide</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 09 May 2016 12:51:56 -0500</pubDate>
-    <lastBuildDate>Mon, 09 May 2016 12:51:56 -0500</lastBuildDate>
+    <link>/Style-Guide/</link>
+    <atom:link href="/Style-Guide/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 09 May 2016 12:59:51 -0500</pubDate>
+    <lastBuildDate>Mon, 09 May 2016 12:59:51 -0500</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -50,8 +50,8 @@
 
 </description>
         <pubDate>Fri, 06 May 2016 00:00:00 -0500</pubDate>
-        <link>/css/scss/html/javascript/2016/05/06/dropdowns.html</link>
-        <guid isPermaLink="true">/css/scss/html/javascript/2016/05/06/dropdowns.html</guid>
+        <link>/Style-Guide/css/scss/html/javascript/2016/05/06/dropdowns.html</link>
+        <guid isPermaLink="true">/Style-Guide/css/scss/html/javascript/2016/05/06/dropdowns.html</guid>
         
         
         <category>CSS</category>
@@ -82,8 +82,8 @@
 
 </description>
         <pubDate>Wed, 04 May 2016 08:46:45 -0500</pubDate>
-        <link>/jekyll/update/2016/05/04/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/update/2016/05/04/welcome-to-jekyll.html</guid>
+        <link>/Style-Guide/jekyll/update/2016/05/04/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">/Style-Guide/jekyll/update/2016/05/04/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
