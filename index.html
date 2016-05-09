@@ -1,1 +1,28 @@
-Coming soon
+---
+layout: default
+---
+
+<section id="intro" class="intro">
+  <header class="post-title">
+    <h2>Introduction</h2>
+  </header>
+
+  <div class="post-content">
+    <p>This site is meant to help us unify our front-end code. These are the documented best-practises for front-end code structure. Grab the HAML code for the feature you’re building and just plug in the data.</p>
+  </div>
+</section>
+
+  <div class="post-list">
+    {% for post in site.posts %}
+      <section id="{{ post.slug }}" class="post">
+        <header class="post-title">
+          <h2>{{ post.title }}</h2>
+        </header>
+
+        <div class="post-content">
+          {{ post.content }}
+        </div>
+
+      </section>
+    {% endfor %}
+  </div>
