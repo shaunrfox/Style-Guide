@@ -23,10 +23,10 @@ Add content using Markdown. See: [this](https://daringfireball.net/projects/mark
 	- A simple description will help people with context.
 - Code
 	- Code can be shown with Jekyll's built-in syntax highlighter:
-		```
-			{% highlight html %}
-				[insert code here]
-			{% endhighlight %}
-		```
+
+	{% highlight html %}
+		[insert code here]
+	{% endhighlight %}
+
 - Example
 	- Use an h3 (`### Example`) to make a header for this section.
