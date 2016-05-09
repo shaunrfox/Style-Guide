@@ -75,9 +75,7 @@ $(document).ready(function () {
 
 	// - Check if on screen during scroll
 	$(window).scroll(function() {
-		// console.log("body is scrolling");
+		console.log("body is scrolling");
 		onScreenChecker();
 	});
-
-	prettyPrint();
 });

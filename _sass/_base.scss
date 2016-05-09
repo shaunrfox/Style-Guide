@@ -115,26 +115,3 @@ hr {
 }
 
 ::selection { background: tint($cyan, 10); }
-
-pre,
-code {
-	font-size: 15px;
-	border: 1px solid $light-grey;
-	border-radius: 3px;
-	background-color: $off-white;
-}
-
-code {
-	padding: 1px 5px;
-}
-
-pre {
-	padding: 8px 12px;
-	overflow-x: auto;
-
-	> code {
-			border: 0;
-			padding-right: 0;
-			padding-left: 0;
-	}
-}
