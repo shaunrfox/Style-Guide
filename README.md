@@ -1,5 +1,11 @@
 # Front-end Style Guide
 
+This site is meant to help us unify our front-end code. These are the documented best-practises for front-end code structure. You can help us maintain this project by submitting your own examples of best practises you come across.
+
+You can view the docs site at [shaunfox.com/style-guide/](http://shaunfox.com/style-guide/)
+
+---
+
 ## This site is built on [Jekyll](https://jekyllrb.com/), a static site generator.
 
 To run Jekyll locally, navigate to the project's folder and run `jekyll serve`. This will compile your changes and watch for new ones, plus serve your site up at [localhost:4000/style-guide/](localhost:4000/style-guide/).
@@ -19,11 +25,11 @@ Add content using Markdown. See: [this](https://daringfireball.net/projects/mark
 
 ## Content Types
 
-### Description
+#### Description
 
 A simple description will help people with context.
 
-### Code
+#### Code
 
 Code can be shown with Jekyll's built-in syntax highlighter:
 
@@ -31,6 +37,6 @@ Code can be shown with Jekyll's built-in syntax highlighter:
 		[insert code here]
 	{% endhighlight %}
 
-### Example
+#### Example
 
 Use an h3 (`### Example`) to make a header for this section.
