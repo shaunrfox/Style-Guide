@@ -19,14 +19,18 @@ Add content using Markdown. See: [this](https://daringfireball.net/projects/mark
 
 ## Content Types
 
-- Description
-	- A simple description will help people with context.
-- Code
-	- Code can be shown with Jekyll's built-in syntax highlighter:
+### Description
+
+A simple description will help people with context.
+
+### Code
+
+Code can be shown with Jekyll's built-in syntax highlighter:
 
 	{% highlight html %}
 		[insert code here]
 	{% endhighlight %}
 
-- Example
-	- Use an h3 (`### Example`) to make a header for this section.
+### Example
+
+Use an h3 (`### Example`) to make a header for this section.
