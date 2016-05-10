@@ -14,7 +14,9 @@ To run Jekyll locally, navigate to the project's folder and run `jekyll serve`. 
 
 Duplicate a file in the `_posts` folder and rename to the current date and the name of the section you wish to create.
 
-Open the file in your favorite editor and make the same changes in the [front-matter](https://jekyllrb.com/docs/frontmatter/) of your post.
+	2016-05-06-dropdowns.markdown
+
+Open the file in your favorite editor and make the same changes in the [front-matter](https://jekyllrb.com/docs/frontmatter/) of your post. You can add tags, which we'll probably use down the road.
 
 	layout: post
 	title:  "Dropdowns"

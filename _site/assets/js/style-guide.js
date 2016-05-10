@@ -4,19 +4,10 @@ $(document).ready(function () {
 	var hash = window.location.hash.substring(1);
 	var $root = $('body, html');
 
-	// var scrollablePosition = $(".scrollable-menu").offset().top;
-	// console.log(scrollablePosition);
-
 	$('nav li a').click(function() {
-		// var href = $.attr(this, 'href');
 
 		var correctSection = $(this).attr("id").replace('link-','');
-		console.log(correctSection);
-
 		var sectionOffset = $("#" + correctSection);
-		console.log( $(sectionOffset).offset().top );
-
-		// var scrollableOffset = $(sectionOffset).offset().top * -1;
 
 		$root.animate({
 			scrollTop: $(sectionOffset).offset().top
@@ -58,14 +49,11 @@ $(document).ready(function () {
 	var onScreenChecker = function() {
 		$("section").each(function() {
 			var onScreenId = $(this).attr("id");
-			console.log( onScreenId );
 
 			if ( $(this).isOnScreen() ) {
 				$("#link-" + onScreenId).addClass("active");
-				// console.log( onScreenId + " is visible");
 			} else {
 				$("#link-" + onScreenId).removeClass("active");
-				// console.log( onScreenId + " is not visible");
 			}
 		});
 	};
@@ -75,7 +63,6 @@ $(document).ready(function () {
 
 	// - Check if on screen during scroll
 	$(window).scroll(function() {
-		console.log("body is scrolling");
 		onScreenChecker();
 	});
 });
