@@ -42,3 +42,33 @@ Code can be shown with Jekyll's built-in syntax highlighter:
 #### Example
 
 Use an h3 (`### Example`) to make a header for this section.
+
+---
+
+## Topics we'd like to cover
+
+### HTML
+
+- Buttons
+- Dropdowns
+- Inputs (multiple)
+- Modals
+
+### Javascript
+
+- Ideas here: [https://github.com/airbnb/javascript]
+
+### SCSS/CSS
+
+- The Box Model
+- The Float Property
+- The Display Property
+- The Position Property
+- How to Center Things
+- Layouts
+- CSS General Problem Solving
+- SCSS
+	- Variables
+	- Mixins
+	- Nesting
+	- Functions
