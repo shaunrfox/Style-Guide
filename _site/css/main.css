@@ -780,6 +780,27 @@ nav {
         nav ul li a:focus {
           outline: none; }
 
+.filter-topics {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: none; }
+  .filter-topics input.filter {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px 0 35px;
+    border: none;
+    border-bottom: 1px solid #ccc; }
+    .filter-topics input.filter:focus {
+      outline: none;
+      border-color: #00ccff; }
+  .filter-topics svg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px; }
+
 /**
  * Syntax highlighting styles
  */
