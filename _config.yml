@@ -8,9 +8,7 @@
 # Site settings
 title: Front-end Style Guide
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This site is meant to help us unify our front-end code. These are the documented best-practises for front-end code structure. You can help us maintain this project by submitting your own examples of best practises you come across.
 baseurl: "/style-guide" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 highlighter: rouge
