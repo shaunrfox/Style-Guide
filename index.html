@@ -12,11 +12,19 @@ layout: default
   </div>
 </section>
 
-{% for post in site.posts %}
+{% assign all-posts = (site.posts | sort: 'title') %}
+{% for post in all-posts %}
   <section id="{{ post.slug }}" class="post">
     <header class="post-title">
+      <a class="post-title-hash" href="#{{ post.slug }}" data-id="{{ post.slug }}">#</a>
       <h2>{{ post.title }}</h2>
     </header>
+
+    <div class="meta">
+      {% for category in post.categories %}
+        <div class="category">{{ category }}</div>
+      {% endfor %}
+    </div>
 
     <div class="post-content">
       {{ post.content }}

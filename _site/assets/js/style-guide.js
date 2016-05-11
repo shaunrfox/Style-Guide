@@ -4,9 +4,9 @@ $(document).ready(function () {
 	var hash = window.location.hash.substring(1);
 	var $root = $('body, html');
 
-	$('nav li a').click(function() {
+	$('nav li a, .post-title-hash').click(function() {
 
-		var correctSection = $(this).attr("id").replace('link-','');
+		var correctSection = $(this).attr("data-id");
 		var sectionOffset = $("#" + correctSection);
 
 		$root.animate({
