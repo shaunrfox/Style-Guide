@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Variables in SCSS</title>
-  <meta name="description" content="SCSS (or Sass) variables can be used for any kind of simple stored value. We most commonly use them for colors, but they can be used for lots of things.">
+  <title>Buttons</title>
+  <meta name="description" content="Main button classes">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
-  <link rel="canonical" href="/style-guide/css/scss/2016/05/10/variables-in-scss.html">
+  <link rel="canonical" href="/style-guide/html/2016/05/11/buttons.html">
   <link rel="alternate" type="application/rss+xml" title="Front-end Style Guide" href="/style-guide/feed.xml">
 </head>
 
@@ -1984,32 +1984,37 @@
 	</header>
 
 	<div class="post-content">
-		<p>SCSS (or Sass) variables can be used for any kind of simple stored value. We most commonly use them for colors, but they can be used for lots of things.</p>
+		<p>Main button classes</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$snap-blue</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
-<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fe5019</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>.button
+.button-action
+.button-cancel
+.icon-button
+</code></pre>
+</div>
 
-<span class="nv">$filter-buttons-height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+<p>Add-on classes</p>
 
-<span class="nv">$global-padding</span><span class="p">:</span> <span class="m">2%</span><span class="p">;</span></code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>.small-button
+.toggle-button
+</code></pre>
+</div>
 
-<hr />
+<p>HTML Structure</p>
 
-<h3 id="usage">Usage</h3>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>A button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button-action"</span><span class="nt">&gt;</span>An action button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button-cancel"</span><span class="nt">&gt;</span>A cancel button<span class="nt">&lt;/button&gt;</span>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="nv">$snap-blue</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="nv">$filter-buttons-height</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="nv">$global-padding</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>A link styled like a button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button-action"</span><span class="nt">&gt;</span>A link styled like an action button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button-cancel"</span><span class="nt">&gt;</span>A link styled like a cancel button<span class="nt">&lt;/a&gt;</span>
 
-<p>This compiles to:</p>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button small-button"</span><span class="nt">&gt;</span>A small button<span class="nt">&lt;/button&gt;</span>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
-  <span class="nl">background</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">2%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button toggle-button"</span><span class="nt">&gt;</span>A Toggle Button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p><a href="http://codepen.io/shaunrfox/pen/dPZobW">Live example on Codepen</a></p>
 
 	</div>
 

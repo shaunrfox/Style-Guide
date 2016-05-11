@@ -50,8 +50,9 @@ Use an h3 (`### Example`) to make a header for this section.
 ### HTML
 
 - Buttons
-- Dropdowns
+- ~~Dropdowns~~
 - Inputs (multiple)
+	- ~~Checkboxes~~
 - Modals
 
 ### Javascript
@@ -60,15 +61,8 @@ Use an h3 (`### Example`) to make a header for this section.
 
 ### SCSS/CSS
 
-- General CSS education
-	- The Box Model
-	- The Float Property
-	- The Display Property
-	- The Position Property
-	- How to Center Things
-	- Layouts
-	- CSS General Problem Solving
-- SCSS Variables
+- ~~General CSS education~~
+- ~~SCSS Variables~~
 - Color Variables and Functions
 - Mixins
 - Nesting in SCSS
