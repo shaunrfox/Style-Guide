@@ -14,7 +14,6 @@
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
-  <script src="/style-guide/assets/js/style-guide.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
   <link rel="canonical" href="/style-guide/">
@@ -1959,6 +1958,8 @@
 	</div>
 	<ul>
     
+      <li><a class="page-link" href="#variables-in-scss" id="link-variables-in-scss">Variables in SCSS</a></li>
+    
       <li><a class="page-link" href="#dropdowns" id="link-dropdowns">Dropdowns</a></li>
     
 	</ul>
@@ -1981,19 +1982,51 @@
   </div>
 </section>
 
-  <div class="post-list">
-    
-      <section id="dropdowns" class="post">
-        <header class="post-title">
-          <h2>Dropdowns</h2>
-        </header>
 
-        <div class="post-content">
-          <p>Default code from Bootstrap. As long as the ID matches between the <code class="brackets">button</code> and the <code class="brackets">ul</code>, you can just drop it in and it’ll work automatically.</p>
+  <section id="variables-in-scss" class="post">
+    <header class="post-title">
+      <h2>Variables in SCSS</h2>
+    </header>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Code Here
-</code></pre>
-</div>
+    <div class="post-content">
+      <p>SCSS (or Sass) variables can be used for any kind of simple stored value. We most commonly use them for colors, but they can be used for lots of things.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$snap-blue</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fe5019</span><span class="p">;</span>
+
+<span class="nv">$filter-buttons-height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+
+<span class="nv">$global-padding</span><span class="p">:</span> <span class="m">2%</span><span class="p">;</span></code></pre></figure>
+
+<hr />
+
+<h3 id="usage">Usage</h3>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$snap-blue</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$filter-buttons-height</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="nv">$global-padding</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This compiles to:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">2%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+    </div>
+
+  </section>
+
+  <section id="dropdowns" class="post">
+    <header class="post-title">
+      <h2>Dropdowns</h2>
+    </header>
+
+    <div class="post-content">
+      <p>Default code from Bootstrap. As long as the ID matches between the <code class="brackets">button</code> and the <code class="brackets">ul</code>, you can just drop it in and it’ll work automatically.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn blue dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"cool-dropdown"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
@@ -2026,14 +2059,21 @@
 <p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
 
-        </div>
+    </div>
 
-      </section>
-    
-  </div>
+  </section>
+
 
       </div>
     </div>
+
+    <footer class="site-footer">
+
+  <script src="/style-guide/assets/js/style-guide.js"></script>
+
+</footer>
+
+
   </body>
 
 </html>

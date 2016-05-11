@@ -624,10 +624,12 @@ section.intro {
     background: #fff; }
     section.post .post-title h2,
     section.intro .post-title h2 {
+      font-size: 30px;
+      font-size: 3rem;
       line-height: 70px;
       font-weight: 400;
       margin: 0;
-      color: #00a3cc; }
+      color: #111; }
   section.post .post-content,
   section.intro .post-content {
     width: 850px;
@@ -639,15 +641,6 @@ section.intro {
 section.intro p {
   font-size: 25px;
   font-size: 2.5rem; }
-
-p {
-  position: relative;
-  margin: 10px 0 30px; }
-
-hr {
-  margin: 40px 0;
-  border: 0;
-  border-bottom: 1px solid #ccc; }
 
 code, pre {
   font-family: Monaco, Andale Mono, Courier New, monospace; }
@@ -772,11 +765,26 @@ nav {
         overflow: hidden;
         text-decoration: none;
         background: #eee; }
+        nav ul li a:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -5px;
+          width: 5px;
+          background: #9bc2d2;
+          -webkit-transition: all ease 200ms;
+          -moz-transition: all ease 200ms;
+          -o-transition: all ease 200ms;
+          transition: all ease 200ms; }
         nav ul li a.active, nav ul li a:active, nav ul li a:hover {
           opacity: 1;
           color: #000;
           background: #f7f7f7;
-          text-decoration: none; }
+          text-decoration: none;
+          padding-left: 20px; }
+          nav ul li a.active:before, nav ul li a:active:before, nav ul li a:hover:before {
+            left: 0; }
         nav ul li a:focus {
           outline: none; }
 

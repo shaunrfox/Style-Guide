@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Dropdowns</title>
-  <meta name="description" content="Default code from Bootstrap. As long as the ID matches between the button and the ul, you can just drop it in and it’ll work automatically.">
+  <title>Variables in SCSS</title>
+  <meta name="description" content="SCSS (or Sass) variables can be used for any kind of simple stored value. We most commonly use them for colors, but they can be used for lots of things.">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
-  <link rel="canonical" href="/style-guide/css/scss/html/javascript/2016/05/06/dropdowns.html">
+  <link rel="canonical" href="/style-guide/css/scss/2016/05/10/variables-in-scss.html">
   <link rel="alternate" type="application/rss+xml" title="Front-end Style Guide" href="/style-guide/feed.xml">
 </head>
 
@@ -1977,38 +1977,32 @@
 	</header>
 
 	<div class="post-content">
-		<p>Default code from Bootstrap. As long as the ID matches between the <code class="brackets">button</code> and the <code class="brackets">ul</code>, you can just drop it in and it’ll work automatically.</p>
+		<p>SCSS (or Sass) variables can be used for any kind of simple stored value. We most commonly use them for colors, but they can be used for lots of things.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn blue dropdown-toggle"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"cool-dropdown"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
-    Dropdown
-    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
-  <span class="nt">&lt;/button&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"cool-dropdown"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$snap-blue</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fe5019</span><span class="p">;</span>
 
-<h3 id="example">Example</h3>
+<span class="nv">$filter-buttons-height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
 
-<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<span class="nv">$global-padding</span><span class="p">:</span> <span class="m">2%</span><span class="p">;</span></code></pre></figure>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<hr />
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h3 id="usage">Usage</h3>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$snap-blue</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="nv">$filter-buttons-height</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="nv">$global-padding</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>This compiles to:</p>
 
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">2%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 	</div>
 

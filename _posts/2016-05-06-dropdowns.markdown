@@ -7,10 +7,6 @@ categories: CSS SCSS HTML Javascript
 
 Default code from Bootstrap. As long as the ID matches between the <code class="brackets">button</code> and the <code class="brackets">ul</code>, you can just drop it in and it’ll work automatically.
 
-```
-Code Here
-```
-
 {% highlight html %}
 <div class="dropdown">
   <button class="btn blue dropdown-toggle" type="button" id="cool-dropdown" data-toggle="dropdown">

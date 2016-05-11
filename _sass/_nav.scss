@@ -64,6 +64,17 @@ nav {
         text-decoration: none;
         background: $off-white;
 
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -5px;
+          width: 5px;
+          background: tint($blue, 40);
+          @include transition(all ease 200ms);
+        }
+
         &.active,
         &:active,
         &:hover {
@@ -71,6 +82,11 @@ nav {
           color: $black;
           background: tint($off-white, 50);
           text-decoration: none;
+          padding-left: 20px;
+
+          &:before {
+            left: 0;
+          }
         }
 
         &:focus { outline: none; }

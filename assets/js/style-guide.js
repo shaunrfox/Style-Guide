@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 	// - Function to check if section is on screen
 	var onScreenChecker = function() {
-		$("section").each(function() {
+		$("section.post").each(function() {
 			var onScreenId = $(this).attr("id");
 
 			if ( $(this).isOnScreen() ) {
