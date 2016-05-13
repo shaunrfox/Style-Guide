@@ -49,7 +49,7 @@ Use an h3 (`### Example`) to make a header for this section.
 
 ### HTML
 
-- Buttons
+- ~~Buttons~~
 - ~~Dropdowns~~
 - Inputs (multiple)
 	- ~~Checkboxes~~
@@ -63,7 +63,7 @@ Use an h3 (`### Example`) to make a header for this section.
 
 - ~~General CSS education~~
 - ~~SCSS Variables~~
-- Color Variables and Functions
+- ~~Color Variables and Functions~~
 - Mixins
 - Nesting in SCSS
 - Functions in SCSS

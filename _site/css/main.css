@@ -639,6 +639,7 @@ section.intro {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
+      transform-style: perserve-3d;
       position: absolute;
       left: 15px;
       color: #ccc;
@@ -662,7 +663,8 @@ section.intro {
       color: #111; }
   section.post .post-content,
   section.intro .post-content {
-    width: 850px;
+    width: 100%;
+    max-width: 850px;
     padding: 20px 40px; }
   section.post:last-child,
   section.intro:last-child {

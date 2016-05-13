@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Buttons</title>
-  <meta name="description" content="Main button classes">
+  <title>SCSS Color Variables</title>
+  <meta name="description" content="Our color variables, defined in _colors.scss, are designed to help us reuse colors without having to remember hex values.">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
-  <link rel="canonical" href="/style-guide/html/2016/05/11/buttons.html">
+  <link rel="canonical" href="/style-guide/css/scss/2016/05/13/SCSS-color-variables.html">
   <link rel="alternate" type="application/rss+xml" title="Front-end Style Guide" href="/style-guide/feed.xml">
 </head>
 
@@ -1988,37 +1988,87 @@
 	</header>
 
 	<div class="post-content">
-		<p>Main button classes</p>
+		<p>Our color variables, defined in <code class="highlighter-rouge">_colors.scss</code>, are designed to help us reuse colors without having to remember hex values.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.button
-.button-action
-.button-cancel
-.icon-button
-</code></pre>
-</div>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* This is a default set of utility colors that we use from time to time. */</span>
+<span class="nv">$red</span><span class="p">:</span> <span class="mh">#ed1c24</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#ff6600</span><span class="p">;</span>
+<span class="nv">$yellow</span><span class="p">:</span> <span class="mh">#ffcc00</span><span class="p">;</span>
+<span class="nv">$forest-green</span><span class="p">:</span> <span class="mh">#666600</span><span class="p">;</span>
+<span class="nv">$green</span><span class="p">:</span> <span class="mh">#51b848</span><span class="p">;</span>
+<span class="nv">$teal</span><span class="p">:</span> <span class="mh">#006666</span><span class="p">;</span>
+<span class="nv">$blue</span><span class="p">:</span> <span class="mh">#0090cb</span><span class="p">;</span>
+<span class="nv">$cyan</span><span class="p">:</span> <span class="mh">#00ccff</span><span class="p">;</span>
+<span class="nv">$dark-cyan</span><span class="p">:</span> <span class="nf">darken</span><span class="p">(</span><span class="nv">$cyan</span><span class="o">,</span> <span class="m">10%</span><span class="p">);</span>
+<span class="nv">$indigo</span><span class="p">:</span> <span class="mh">#2a1e5c</span><span class="p">;</span>
+<span class="nv">$purple</span><span class="p">:</span> <span class="mh">#66439a</span><span class="p">;</span>
+<span class="nv">$yellow-green</span><span class="p">:</span> <span class="mh">#efe80c</span><span class="p">;</span>
+<span class="nv">$red-orange</span><span class="p">:</span> <span class="mh">#ff3600</span><span class="p">;</span>
+<span class="nv">$tan</span><span class="p">:</span> <span class="mh">#F2F1E6</span><span class="p">;</span>
+<span class="nv">$dark-tan</span><span class="p">:</span> <span class="mh">#C6C7C0</span><span class="p">;</span>
 
-<p>Add-on classes</p>
+<span class="cm">/* These are all of our blacks, greys, and whites. */</span>
+<span class="nv">$black</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$off-black</span><span class="p">:</span> <span class="mh">#111</span><span class="p">;</span>
+<span class="nv">$dark-grey</span><span class="p">:</span> <span class="mh">#666</span><span class="p">;</span>
+<span class="nv">$mid-grey</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+<span class="nv">$light-grey</span><span class="p">:</span> <span class="mh">#ccc</span><span class="p">;</span>
+<span class="nv">$off-white</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span>
+<span class="nv">$white</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.small-button
-.toggle-button
-</code></pre>
-</div>
+<span class="cm">/* Sometimes we'll define colors for very specific uses. They should get very specific names to help assure that they're only used in the appropriate place. */</span>
+<span class="nv">$filter-background</span><span class="p">:</span> <span class="mh">#f9f4de</span><span class="p">;</span>
+<span class="nv">$filter-active-button-color</span><span class="p">:</span> <span class="mh">#eee27e</span><span class="p">;</span>
 
-<p>HTML Structure</p>
+<span class="cm">/* Our brand colors */</span>
+<span class="nv">$snap-blue</span><span class="p">:</span> <span class="mh">#00a9ed</span><span class="p">;</span>
+<span class="nv">$orange</span><span class="p">:</span> <span class="mh">#fe5019</span><span class="p">;</span>
+<span class="nv">$midnight</span><span class="p">:</span> <span class="mh">#002B38</span><span class="p">;</span>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>A button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button-action"</span><span class="nt">&gt;</span>An action button<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button-cancel"</span><span class="nt">&gt;</span>A cancel button<span class="nt">&lt;/button&gt;</span>
+<span class="cm">/* If we find that we're recreating a particular color often, we should store it as a new variable, like this: */</span>
+<span class="nv">$light-blue</span><span class="p">:</span> <span class="nf">tint</span><span class="p">(</span><span class="nv">$blue</span><span class="o">,</span> <span class="m">30%</span><span class="p">);</span></code></pre></figure>
 
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>A link styled like a button<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button-action"</span><span class="nt">&gt;</span>A link styled like an action button<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"button-cancel"</span><span class="nt">&gt;</span>A link styled like a cancel button<span class="nt">&lt;/a&gt;</span>
+<p>There are also a few functions we can use to transform colors to other colors.</p>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button small-button"</span><span class="nt">&gt;</span>A small button<span class="nt">&lt;/button&gt;</span>
+<h2 id="our-custom-color-functions">Our custom color functions:</h2>
 
-<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"button toggle-button"</span><span class="nt">&gt;</span>A Toggle Button<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Slightly lighten a color
+</span><span class="k">@function</span> <span class="nf">tint</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$percentage</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="no">white</span><span class="o">,</span> <span class="nv">$percentage</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p><a href="http://codepen.io/shaunrfox/pen/dPZobW">Live example on Codepen</a></p>
+<span class="c1">// Usage
+</span><span class="nc">.box</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nf">tint</span><span class="p">(</span><span class="nv">$blue</span><span class="o">,</span> <span class="m">30</span><span class="p">);</span> <span class="c1">// mixes $blue at 30% and white at 70%
+</span><span class="p">}</span>
+
+<span class="c1">// Slightly darken a color
+</span><span class="k">@function</span> <span class="nf">shade</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$percentage</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="no">black</span><span class="o">,</span> <span class="nv">$percentage</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Usage
+</span><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nf">shade</span><span class="p">(</span><span class="nv">$blue</span><span class="o">,</span> <span class="m">80</span><span class="p">);</span> <span class="c1">// mixes $blue at 80% and black at 20%
+</span><span class="p">}</span></code></pre></figure>
+
+<p>These are our preferred way to transform colors because it outputs a slightly more predictable result than the standard lighten() and darken() built into SCSS.</p>
+
+<h2 id="built-in-scss-color-functions">Built-in SCSS color functions:</h2>
+
+<ul>
+  <li>Lighten: <code class="highlighter-rouge">background: lighten($blue, 20);</code></li>
+  <li>Darken: <code class="highlighter-rouge">background: darken($orange, 60);</code></li>
+  <li>RGBA:
+    <ul>
+      <li><code class="highlighter-rouge">color: rgba($off-black, 60);</code> - useful for letting text mix onto background colors</li>
+      <li><code class="highlighter-rouge">background: rgba($white, 95);</code> - useful for making the background of an element transparent without affecting the transparency of it’s contents.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are many more color functions, but these are the main ones we use.</p>
 
 	</div>
 

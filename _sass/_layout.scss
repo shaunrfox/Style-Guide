@@ -57,7 +57,8 @@ section.intro {
 	}
 
 	.post-content {
-		width: 850px;
+		width: 100%;
+		max-width: 850px;
 		padding: 20px 40px;
 	}
 
