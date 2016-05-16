@@ -42,8 +42,13 @@ nav {
   }
 
   ul {
-    width: 100%;
     @include unstyled-list();
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
 
     li {
       display: block;
@@ -99,7 +104,6 @@ nav {
   position: relative;
   width: 100%;
   height: 40px;
-  display: none;
 
   input.filter {
     width: 100%;

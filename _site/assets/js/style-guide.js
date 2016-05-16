@@ -1,11 +1,13 @@
-$(document).ready(function () {
+(function() {
 
-	// Click scroll to ID
-	var hash = window.location.hash.substring(1);
-	var $root = $('body, html');
+/* * * * * * *
+ * Scroll and highlight code
+ * * * * * * */
+
+	var hash;
+	var $root;
 
 	$('nav li a, .post-title-hash').click(function() {
-
 		var correctSection = $(this).attr("data-id");
 		var sectionOffset = $("#" + correctSection);
 
@@ -46,7 +48,7 @@ $(document).ready(function () {
 	};
 
 	// - Function to check if section is on screen
-	var onScreenChecker = function() {
+	function onScreenChecker() {
 		$("section.post").each(function() {
 			var onScreenId = $(this).attr("id");
 
@@ -58,11 +60,66 @@ $(document).ready(function () {
 		});
 	};
 
-	// - Check if on screen at page load
-	onScreenChecker();
+/* * * * * * *
+ * Filter code
+ * * * * * * */
+
+	var searchInput;
+
+	function filterTopics(filterString) {
+		var lowercaseFilterString = filterString.toLowerCase();
+		toggleNavListItems(lowercaseFilterString);
+		toggleContentListItems(lowercaseFilterString);
+		setTimeout(function(){
+			onScreenChecker();
+		}, 0);
+	}
+
+	function toggleNavListItems(filterString) {
+		$("nav ul li").each(function(index, element) {
+			 var dataID = $(this).attr("data-filter-id").toLowerCase();
+
+			 if ( dataID.indexOf(filterString) !== -1 ) {
+					$(this).show();
+					return;
+			 }
+
+			 $(this).hide();
+		});
+	}
+
+	function toggleContentListItems(filterString) {
+		$(".wrapper .post").each(function(index, element) {
+			 var dataID = $(this).attr("data-filter-id").toLowerCase();
+
+			 if ( dataID.indexOf(filterString) !== -1 ) {
+					$(this).show();
+					return;
+			 }
+
+			 $(this).hide();
+		});
+	}
+
+	function searchInputKeyup() {
+		filterTopics(searchInput.val());
+	}
+
+	function initialize() {
+		hash = window.location.hash.substring(1);
+		$root = $('body, html');
+
+		onScreenChecker();
+
+		searchInput = $(".filter-topics > input");
+		searchInput.on("keyup", searchInputKeyup);
+	}
+
+	$(document).ready(initialize);
 
 	// - Check if on screen during scroll
 	$(window).scroll(function() {
 		onScreenChecker();
 	});
-});
+
+}());
