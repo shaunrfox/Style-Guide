@@ -47,6 +47,14 @@ Use an h3 (`### Example`) to make a header for this section.
 
 ## Topics we'd like to cover
 
+### General Concepts
+
+- Naming Conventions
+- caniuse.com
+- kagax ES5 and ES6 tables
+- Git
+- Minimalist Philosophy
+
 ### HTML
 
 - ~~Buttons~~
@@ -54,16 +62,34 @@ Use an h3 (`### Example`) to make a header for this section.
 - Inputs (multiple)
 	- ~~Checkboxes~~
 - Modals
+- Buttons vs Anchor tags
+- General HTML
+	- Element Display Behavior
+	- Minimal nesting/wrappers
+- HTML Primer
+	- Make overall primer with table (deep-link into sections) (Element type, Description, Link)
 
 ### Javascript
 
-- Ideas here: [https://github.com/airbnb/javascript]
+- ES5 Array functions
+- ES6
+- 'this' in Javascript
+- Global Namespace in Javascript
+- Strict Mode
+- jQuery Primer
+- Angular Primer
+- Syntax
 
 ### SCSS/CSS
 
 - ~~General CSS education~~
+	- Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
+	- Break these out into their own sections
 - ~~SCSS Variables~~
 - ~~Color Variables and Functions~~
 - Mixins
 - Nesting in SCSS
 - Functions in SCSS
+- CSS Problem Solving
+- Inline Styling
+- Pseudo Element Primer
