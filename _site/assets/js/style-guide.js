@@ -7,7 +7,7 @@
 	var hash;
 	var $root;
 
-	$('nav li a, .post-title-hash').click(function() {
+	$('nav li a, .post-title-hash, .table a').click(function() {
 		var correctSection = $(this).attr("data-id");
 		var sectionOffset = $("#" + correctSection);
 

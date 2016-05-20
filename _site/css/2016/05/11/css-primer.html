@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>SCSS Mixins</title>
-  <meta name="description" content="Mixins are chunks of commonly used code that can be included again and again throughout your SCSS. Mixins can also take a variable when they’re called.">
+  <title>CSS Primer</title>
+  <meta name="description" content="			Name		Description		Common Values				CSS Display		"Every element on a web page is a rectangular box. The display property in CSS determines just how that r...">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
-  <link rel="canonical" href="/style-guide/css/scss/2016/05/13/SCSS-SCSS-mixins.html">
+  <link rel="canonical" href="/style-guide/css/2016/05/11/css-primer.html">
   <link rel="alternate" type="application/rss+xml" title="Front-end Style Guide" href="/style-guide/feed.xml">
 </head>
 
@@ -2010,74 +2010,76 @@
 	</header>
 
 	<div class="post-content">
-		<p>Mixins are chunks of commonly used code that can be included again and again throughout your SCSS. Mixins can also take a variable when they’re called.</p>
+		<div class="table">
+	<header class="row header">
+		<div>Name</div>
+		<div>Description</div>
+		<div>Common Values</div>
+	</header>
+	<div class="row">
+		<div><a href="#css-display" data-id="css-display">CSS Display</a></div>
+		<div>"Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves." &mdash;CSS Tricks</div>
+		<div>block, inline-block</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-background" data-id="css-background">CSS Background</a></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="row">
+		<div><a href="#css-layout" data-id="css-layout">CSS Layout</a></div>
+		<div></div>
+		<div>position, z-index, top, right, bottom, left, float, clear, vertical-align, transform</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-box-model" data-id="css-box-model">CSS Box Model</a></div>
+		<div>The Box-model is the basis for the strucure of elements on the web. Things like `width`, `height`, `padding`, `margin` and `border` all play into an element's structure.</div>
+		<div>width, height, padding, margin, border, box-sizing</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-text-handling" data-id="css-text-handling">CSS Text Handling</a></div>
+		<div>Everything about dealing with text.</div>
+		<div>font-family, font-weight, font-size, font-style, line-height, letter-spacing, text-align, text-transform, text-decoration, whitespace, color</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-pseudo-elements" data-id="css-pseudo-elements">CSS Pseudo Elements</a></div>
+		<div></div>
+		<div>:before, :after</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-pseudo-selectors" data-id="css-pseudo-selectors">CSS Pseudo Selectors</a></div>
+		<div></div>
+		<div>:hover, :active, :disabled, :first-child, :last-child, :nth-child</div>
+	</div>
+	<div class="row">
+		<div><a href="#css-cursor" data-id="css-cursor">CSS Cursor</a></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="row">
+		<div><a href="#css-overflow" data-id="css-overflow">CSS Overflow</a></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="row">
+		<div><a href="#css-opacity" data-id="css-opacity">CSS Opacity</a></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="row">
+		<div><a href="#css-box-shadow" data-id="css-box-shadow">CSS Box-Shadow</a></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
 
-<p>This snippet is used on parent elements with floating child elements to force them to wrap around their children.</p>
+<h2 id="how-to-center-things">How to Center Things</h2>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">clearfix</span> <span class="p">{</span>
-  <span class="err">&amp;</span><span class="p">:</span><span class="o">:</span><span class="n">after</span> <span class="p">{</span>
-    <span class="nl">content</span><span class="p">:</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="nl">display</span><span class="p">:</span> <span class="n">table</span><span class="p">;</span>
-    <span class="nl">clear</span><span class="p">:</span> <span class="nb">both</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<p>Centering things in CSS can be one of the most challenging parts of understanding CSS. CSS Tricks has a good roundup of the usual methods for centering just about anything:</p>
 
-<p>This snippet is used to generate REM-based font sizes with a PX backup. Note that it takes a variable ($size) and does some math with the value it’s given.</p>
+<p><a href="https://css-tricks.com/centering-css-complete-guide/">Centering in CSS: A Complete Guide, by CSS Tricks</a></p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span> <span class="nf">font-size</span><span class="p">(</span><span class="nv">$size</span><span class="p">){</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="p">(</span><span class="nv">$size</span> <span class="o">*</span> <span class="m">10</span><span class="p">)</span> <span class="o">+</span> <span class="nb">px</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="nv">$size</span> <span class="o">+</span> <span class="n">rem</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>More snippets that are used extensively:</p>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Uppercase, 600, letter-spaced
-</span><span class="k">@mixin</span> <span class="nf">uppercase</span> <span class="p">{</span>
-  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
-  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// Truncate text
-</span><span class="k">@mixin</span> <span class="nf">truncate</span> <span class="p">{</span>
-  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span>
-  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-  <span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// Vertical align anything
-</span><span class="k">@mixin</span> <span class="nf">vertical-align</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
-  <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="m">-50%</span><span class="p">);</span>
-  <span class="nl">transform-style</span><span class="p">:</span> <span class="n">perserve-3d</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<h3 id="usage">Usage</h3>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.box</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">vertical-align</span><span class="p">();</span>
-  <span class="k">@include</span> <span class="nd">uppercase</span><span class="p">();</span>
-  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="mi">.8</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
-
-<h3 id="outputs-to">Outputs to:</h3>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.box</span> <span class="p">{</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
-  <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
-  <span class="nl">top</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
-  <span class="nl">transform</span><span class="p">:</span> <span class="nf">translateY</span><span class="p">(</span><span class="m">-50%</span><span class="p">);</span>
-  <span class="nl">transform-style</span><span class="p">:</span> <span class="n">perserve-3d</span><span class="p">;</span>
-
-  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
-  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
-
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.8rem</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<p>Here’s also an example of how to center using “table” styling (used for very specific situations): <a href="http://codepen.io/shaunrfox/pen/ZYMzpL/">http://codepen.io/shaunrfox/pen/ZYMzpL/</a></p>
 
 	</div>
 

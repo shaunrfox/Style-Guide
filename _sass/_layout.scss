@@ -132,3 +132,42 @@ li { list-style: circle; }
 	border: 1px solid $light-grey;
 	@include clearfix();
 }
+
+.table {
+	width: 100%;
+	height: auto;
+	display: table;
+	border-top: 1px solid $off-white;
+	border-left: 1px solid $off-white;
+	margin-bottom: 40px;
+
+	.row {
+		display: table-row;
+
+		&.header {
+			background: tint($off-white, 40);
+			vertical-align: center;
+
+			> div {
+				@include font-size(1.4);
+				@include uppercase();
+				font-weight: 700;
+			}
+		}
+
+		> div {
+			display: table-cell;
+			padding: 10px;
+			border-right: 1px solid $off-white;
+			border-bottom: 1px solid $off-white;
+			@include font-size(1.8);
+
+			a {
+				color: $cyan;
+				text-decoration: none;
+				white-space: nowrap;
+				&:hover { text-decoration: underline; }
+			}
+		}
+	}
+}

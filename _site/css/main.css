@@ -740,6 +740,39 @@ li {
     display: table;
     clear: both; }
 
+.table {
+  width: 100%;
+  height: auto;
+  display: table;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  margin-bottom: 40px; }
+  .table .row {
+    display: table-row; }
+    .table .row.header {
+      background: #f8f8f8;
+      vertical-align: center; }
+      .table .row.header > div {
+        font-size: 14px;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-weight: 700; }
+    .table .row > div {
+      display: table-cell;
+      padding: 10px;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      font-size: 18px;
+      font-size: 1.8rem; }
+      .table .row > div a {
+        color: #00ccff;
+        text-decoration: none;
+        white-space: nowrap; }
+        .table .row > div a:hover {
+          text-decoration: underline; }
+
 /*
  * * * * * * * * * * * * * * * * * * *
  * NAVIGATION
