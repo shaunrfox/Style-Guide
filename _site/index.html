@@ -2372,7 +2372,95 @@
     </div>
 
     <div class="post-content">
-      <p>font-family, font-weight, font-size, line-height, letter-spacing</p>
+      <h2 id="font-family">font-family</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> Depends on your project.</p>
+
+<p>To set what font gets used, use the <code class="highlighter-rouge">font-family</code> property. In most of our projects this is done for you in our base css.</p>
+
+<p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
+    font-family: Helvetica, Arial, sans-serif;
+}</code></pre></figure>
+
+<p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
+
+<p>If you want to have them download a font, you’ll want to use <code class="highlighter-rouge">@font-face</code>. Here’s a helpful resource <strong>TODO PROVIDE RESOURCE</strong></p>
+
+<hr />
+
+<h2 id="font-size">font-size</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">1.2rem</code>, <code class="highlighter-rouge">1.4rem</code>, <code class="highlighter-rouge">1.6rem</code></p>
+
+<p><code class="highlighter-rouge">font-size</code> controls how big the words will appear.</p>
+
+<p>There are several units you can use, but we recommend pixels and root ems. Root ems are a percentage of the font size set on the html element.</p>
+
+<p>As part of our code, we have a mixin that you should use in most cases. It will take care of both rems and a pixel fallback.</p>
+
+<h3 id="usage">usage</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
+    @include font-size(1.6);
+}</code></pre></figure>
+
+<h3 id="outputs">outputs</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
+    font-size: 16px;
+    font-size: 1.6rem;
+}</code></pre></figure>
+
+<hr />
+
+<h2 id="color">color</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">$off-black</code>, <code class="highlighter-rouge">#ffffff</code>, <code class="highlighter-rouge">tint($mid-grey, 0.7)</code>, <code class="highlighter-rouge">$red</code>, <code class="highlighter-rouge">rgba(255, 255, 255, 0.5)</code></p>
+
+<p><code class="highlighter-rouge">color</code> changes the color of the text.</p>
+
+<p>In our code, we have variables corresponding to color variables. <a href="/style-guide/#scss-color-variables">SCSS Color Variables</a></p>
+
+<hr />
+
+<h2 id="line-height">line-height</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">30px</code></p>
+
+<p><code class="highlighter-rouge">line-height</code> sets the vertical spacing between lines of text. We mostly use it to vertically center a single line of text. If there is a chance your text might wrap, use a different method as detailed by <a href="https://css-tricks.com/centering-css-complete-guide/">Centering in CSS: A Complete Guide, by CSS Tricks</a></p>
+
+<p><strong>todo explain how we do this to center texts in buttons</strong></p>
+
+<hr />
+
+<h2 id="text-align">text-align</h2>
+
+<hr />
+
+<h2 id="font-weight">font-weight</h2>
+
+<hr />
+
+<h2 id="font-style">font-style</h2>
+
+<hr />
+
+<h2 id="text-transform">text-transform</h2>
+
+<hr />
+
+<h2 id="letter-spacing">letter-spacing</h2>
+
+<hr />
+
+<h2 id="text-decoration">text-decoration</h2>
+
+<hr />
+
+<h2 id="whitespace">whitespace</h2>
+
 
     </div>
 
