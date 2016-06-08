@@ -13,7 +13,7 @@ To set what font gets used, use the `font-family` property. In most of our proje
 
 However, if you want to change what font is used, you should have numerous fallbacks like.
 
-{% highlight html %}
+{% highlight css %}
 .my-class {
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -29,7 +29,7 @@ If you want to have them download a font, you'll want to use `@font-face`. Here'
 
 **EXAMPLE VALUES:** `12px`, `1.2rem`, `1.4rem`, `1.6rem`
 
-`font-size` controls how big the words will appear. 
+`font-size` controls how big the words will appear.
 
 There are several units you can use, but we recommend pixels and root ems. Root ems are a percentage of the font size set on the html element.
 
@@ -37,18 +37,18 @@ As part of our code, we have a mixin that you should use in most cases. It will 
 
 ### usage
 
-{% highlight html %}
+{% highlight css %}
 .my-class {
-    @include font-size(1.6);
+  @include font-size(1.6);
 }
 {% endhighlight %}
 
 ### outputs
 
-{% highlight html %}
+{% highlight css %}
 .my-class {
-    font-size: 16px;
-    font-size: 1.6rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 {% endhighlight %}
 

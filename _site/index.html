@@ -2098,14 +2098,98 @@
     </div>
 
     <div class="post-content">
-      <h1 id="todo">TODO</h1>
-<p>Talk about width, height, padding, margin, border, box-sizing</p>
+      <p>The Box-model is the basis for the strucure of elements on the web. Elements are defined in space by firstly their <a href="/style-guide/#css-display">display-type</a>, then their width and height, followed by other attributes such as padding, margin, and border.</p>
 
-<p>The Box-model is the basis for the strucure of elements on the web. In the original design of the box-model, padding, margin, and border units would add to the size of the div. (That’s the old way)</p>
+<h2 id="box-sizing">box-sizing</h2>
 
-<p>In the new way (using <code class="highlighter-rouge">box-sizing: border-box;</code>), padding and border push into the set dimensions of the div. This allows for much easier calculations and control of item spacing.</p>
+<p>In the original design of the box-model, padding, margin, and border units would add to the size of the div. (That’s the old way)</p>
+
+<p>In the new way (using <code class="highlighter-rouge">box-sizing: border-box;</code>), padding and border push into the set dimensions of the div. This allows for much easier calculations and control of element spacing.</p>
 
 <p>Here’s a live Codepen example: <a href="http://codepen.io/shaunrfox/pen/raojBW/">http://codepen.io/shaunrfox/pen/raojBW/</a></p>
+
+<hr />
+
+<h2 id="width">width</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></p>
+
+<p><code class="highlighter-rouge">width</code> is very straightforward, but the most important thing to keep in mind is scalability on different screen sizes and when the browser window is resized.</p>
+
+<p>To accomodate the different environments that a site could be viewed in, favor setting percentage-based widths.</p>
+
+<hr />
+
+<h2 id="height">height</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></p>
+
+<p><code class="highlighter-rouge">height</code> is considered in much the same way as <code class="highlighter-rouge">width</code>, but is not as often set as a percentage (besides 100%).</p>
+
+<hr />
+
+<h2 id="padding">padding</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">1%</code></p>
+
+<p>In the new box-model mode (<code class="highlighter-rouge">box-sizing: border-box;</code>), padding will push into the element.</p>
+
+<p><code class="highlighter-rouge">padding</code> can be defined on four sides of an element, like many things: top, right, bottom, left. This can be done as a shorthand or as individual values.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">20px</span> <span class="m">30px</span> <span class="m">0</span><span class="p">;</span>
+  <span class="cm">/* top: 10px, right: 20px, bottom: 30px, left: 0 */</span>
+<span class="p">}</span>
+
+<span class="c1">// or
+</span>
+<span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="nl">padding-top</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">padding-left</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="margin">margin</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">0 auto</code></p>
+
+<p><code class="highlighter-rouge">margin</code> is always outside of the dimensions of your element and set the space around the element, relative to it’s neighbors. This being the case, be especially careful not to cause layout collisions. This happens a lot when combining margin with percentage-based widths.</p>
+
+<p>A common trick for horizontally centering an element inside a larger parent is to set <code class="highlighter-rouge">margin: 0 auto;</code>. The <code class="highlighter-rouge">0</code> defines the top and bottom margin (a shorthand), and the auto defines the right and left. It should be noted that this only works if the element also has a width set.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.parent-element</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.child-element</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">400px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="border">border</h2>
+
+<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">1px solid $light-grey</code></p>
+
+<p><code class="highlighter-rouge">border</code> is defined similar to padding and can be treated nearly the same. It can be defined on all sides at once or as individual attributes.</p>
+
+<p>We most commonly use the shorthand definitions listed below, but they can also be broken out on their own. The second example is also a common way we use it, defining multiple values as shorthand, but then overriding specific ones for an interaction or emphasis.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$light-grey</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.other-element</span> <span class="p">{</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$white</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+    <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
     </div>
 
@@ -2380,9 +2464,9 @@
 
 <p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    font-family: Helvetica, Arial, sans-serif;
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
 
@@ -2402,16 +2486,16 @@
 
 <h3 id="usage">usage</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    @include font-size(1.6);
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="err">@include</span> <span class="err">font-size(1.6);</span>
+<span class="p">}</span></code></pre></figure>
 
 <h3 id="outputs">outputs</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    font-size: 16px;
-    font-size: 1.6rem;
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.6rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <hr />
 

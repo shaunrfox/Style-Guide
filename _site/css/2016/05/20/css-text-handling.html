@@ -2018,9 +2018,9 @@
 
 <p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    font-family: Helvetica, Arial, sans-serif;
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
 
@@ -2040,16 +2040,16 @@
 
 <h3 id="usage">usage</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    @include font-size(1.6);
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="err">@include</span> <span class="err">font-size(1.6);</span>
+<span class="p">}</span></code></pre></figure>
 
 <h3 id="outputs">outputs</h3>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">.my-class {
-    font-size: 16px;
-    font-size: 1.6rem;
-}</code></pre></figure>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.6rem</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <hr />
 
