@@ -14,14 +14,14 @@ To run Jekyll locally, navigate to the project's folder and run `jekyll serve`. 
 
 Duplicate a file in the `_posts` folder and rename to the current date and the name of the section you wish to create.
 
-	2016-05-06-dropdowns.markdown
+  2016-05-06-dropdowns.markdown
 
 Open the file in your favorite editor and make the same changes in the [front-matter](https://jekyllrb.com/docs/frontmatter/) of your post. You can add tags, which we'll probably use down the road.
 
-	layout: post
-	title:  "Dropdowns"
-	date:   2016-05-06
-	categories: CSS SCSS HTML Javascript
+  layout: post
+  title:  "Dropdowns"
+  date:   2016-05-06
+  categories: CSS SCSS HTML Javascript
 
 Add content using Markdown. See: [this](https://daringfireball.net/projects/markdown/syntax) or [this](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
@@ -35,9 +35,9 @@ A simple description will help people with context.
 
 Code can be shown with Jekyll's built-in syntax highlighter:
 
-	{% highlight html %}
-		[insert code here]
-	{% endhighlight %}
+  {% highlight html %}
+    [insert code here]
+  {% endhighlight %}
 
 #### Example
 
@@ -60,14 +60,14 @@ Use an h3 (`### Example`) to make a header for this section.
 - ~~Buttons~~
 - ~~Dropdowns~~
 - Inputs (multiple)
-	- ~~Checkboxes~~
+  - ~~Checkboxes~~
 - Modals
 - Buttons vs Anchor tags
 - General HTML
-	- Element Display Behavior
-	- Minimal nesting/wrappers
+  - Element Display Behavior
+  - Minimal nesting/wrappers
 - HTML Primer
-	- Make overall primer with table (deep-link into sections) (Element type, Description, Link)
+  - Make overall primer with table (deep-link into sections) (Element type, Description, Link)
 
 ### Javascript
 
@@ -83,56 +83,56 @@ Use an h3 (`### Example`) to make a header for this section.
 ### SCSS/CSS
 
 - ~~General CSS education~~
-	- Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
-			- ~~Text Handling~~ ---
-					- ~~font-size~~
-					- ~~font-weight~~
-					- ~~line-height~~
-					- ~~text-align~~
-					- ~~letter-spacing~~
-					- ~~text-transform~~
-					- ~~text-decoration~~
-					- ~~font-family~~
-					- ~~font-style~~
-					- ~~color~~
-					- ~~whitespace~~ - ignoring for now
-			- ~~Box Model~~ ---
-					- ~~width~~
-					- ~~height~~
-					- ~~padding~~
-					- ~~margin~~
-					- ~~border~~
-					- ~~border-radius~~
-			- Display ---
-					- inline
-					- block
-					- inline-block
-					- table
-			- Layout ---
-					- position (and top, left, right, bottom)
-					- float (and clear)
-					- z-index
-					- vertical-align
-					- transform (and transform-style)
-			- SVG
-					- fill
-			- Psuedo elements ---
-					 - content (and psuedo elements)
-					 - before
-					 - after
-			- Psudoselectors ---
-					- hover
-					- active
-					- disabled
-					- last-child
-					- first-child
-					- nth-child
-			- Background (and background-color) ---
-			- cursor ---
-			- overflow ---
-			- opacity ---
-			- box-shadow ---
-	- Break these out into their own sections
+  - Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
+      - ~~Text Handling~~ ---
+          - ~~font-size~~
+          - ~~font-weight~~
+          - ~~line-height~~
+          - ~~text-align~~
+          - ~~letter-spacing~~
+          - ~~text-transform~~
+          - ~~text-decoration~~
+          - ~~font-family~~
+          - ~~font-style~~
+          - ~~color~~
+          - ~~whitespace~~ - ignoring for now
+      - ~~Box Model~~ ---
+          - ~~width~~
+          - ~~height~~
+          - ~~padding~~
+          - ~~margin~~
+          - ~~border~~
+          - ~~border-radius~~
+      - Display ---
+          - inline
+          - block
+          - inline-block
+          - table
+      - Layout ---
+          - position (and top, left, right, bottom)
+          - float (and clear)
+          - z-index
+          - vertical-align
+          - transform (and transform-style)
+      - SVG
+          - fill
+      - Psuedo elements ---
+           - content (and psuedo elements)
+           - before
+           - after
+      - Psudoselectors ---
+          - hover
+          - active
+          - disabled
+          - last-child
+          - first-child
+          - nth-child
+      - Background (and background-color) ---
+      - cursor ---
+      - overflow ---
+      - opacity ---
+      - box-shadow ---
+  - Break these out into their own sections
 - ~~SCSS Variables~~
 - ~~Color Variables and Functions~~
 - Mixins
