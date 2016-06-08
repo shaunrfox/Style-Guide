@@ -84,33 +84,33 @@ Use an h3 (`### Example`) to make a header for this section.
 
 - ~~General CSS education~~
 	- Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
-	    - Text Handling ---
-	        - Font-size
-	        - Font-weight
-	        - line-height
-	        - text-align
-	        - letter-spacing
-	        - text-transform
-	        - text-decoration
-	        - whitespace
-	        - font-family
-	        - font-style
-	        - color
-	    - Box Model ---
-	        - Width
-	        - Height
-	        - Padding
-	        - Margin
-	        - Border
-	        - Border-radius
+	    - ~~Text Handling~~ ---
+	        - ~~font-size~~
+	        - ~~font-weight~~
+	        - ~~line-height~~
+	        - ~~text-align~~
+	        - ~~letter-spacing~~
+	        - ~~text-transform~~
+	        - ~~text-decoration~~
+	        - ~~font-family~~
+	        - ~~font-style~~
+	        - ~~color~~
+	        - ~~whitespace~~ - ignoring for now
+	    - ~~Box Model~~ ---
+	        - ~~width~~
+	        - ~~height~~
+	        - ~~padding~~
+	        - ~~margin~~
+	        - ~~border~~
+	        - ~~border-radius~~
 	    - Display ---
-	        - Inline
-	        - Block
-	        - Inline-block
-	        - Table
+	        - inline
+	        - block
+	        - inline-block
+	        - table
 	    - Layout ---
-            - Position (and top, left, right, bottom)
-	        - Float (and clear)
+          - position (and top, left, right, bottom)
+	        - float (and clear)
 	        - z-index
 	        - vertical-align
 	        - transform (and transform-style)

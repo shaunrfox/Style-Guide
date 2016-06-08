@@ -19,7 +19,7 @@ Here's a live Codepen example: <http://codepen.io/shaunrfox/pen/raojBW/>
 
 ## width
 
-**EXAMPLE VALUES:** `100%`, `200px`, `calc(100% - 50px)`
+##### EXAMPLE VALUES: `100%`, `200px`, `calc(100% - 50px)`
 
 `width` is very straightforward, but the most important thing to keep in mind is scalability on different screen sizes and when the browser window is resized.
 
@@ -29,7 +29,7 @@ To accomodate the different environments that a site could be viewed in, favor s
 
 ## height
 
-**EXAMPLE VALUES:** `100%`, `200px`, `calc(100% - 50px)`
+##### EXAMPLE VALUES: `100%`, `200px`, `calc(100% - 50px)`
 
 `height` is considered in much the same way as `width`, but is not as often set as a percentage (besides 100%).
 
@@ -37,7 +37,7 @@ To accomodate the different environments that a site could be viewed in, favor s
 
 ## padding
 
-**EXAMPLE VALUES:** `20px`, `1%`
+##### EXAMPLE VALUES: `20px`, `1%`
 
 In the new box-model mode (`box-sizing: border-box;`), padding will push into the element.
 
@@ -61,7 +61,7 @@ In the new box-model mode (`box-sizing: border-box;`), padding will push into th
 
 ## margin
 
-**EXAMPLE VALUES:** `20px`, `0 auto`
+##### EXAMPLE VALUES: `20px`, `0 auto`
 
 `margin` is always outside of the dimensions of your element and set the space around the element, relative to it's neighbors. This being the case, be especially careful not to cause layout collisions. This happens a lot when combining margin with percentage-based widths.
 
@@ -84,7 +84,7 @@ A common trick for horizontally centering an element inside a larger parent is t
 
 ## border
 
-**EXAMPLE VALUES:** `1px solid $light-grey`
+##### EXAMPLE VALUES: `1px solid $light-grey`
 
 `border` is defined similar to padding and can be treated nearly the same. It can be defined on all sides at once or as individual attributes.
 
@@ -103,3 +103,13 @@ We most commonly use the shorthand definitions listed below, but they can also b
   }
 }
 {% endhighlight %}
+
+---
+
+## border-radius
+
+##### EXAMPLE VALUES: `4px`, `50%`
+
+`border-radius` affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round, forming a circle, for things like avatar images.
+
+It can be defined shorthand as top-left, top-right, bottom-right, bottom-left, or as individual values.

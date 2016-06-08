@@ -96,7 +96,7 @@ code {
 	background-color: tint($yellow, 20);
 	color: rgba($off-black, .6);
 	padding: 3px 5px;
-	@include font-size(1.6);
+	font-size: .8em;
 	@include border-radius-all(3px);
 }
 

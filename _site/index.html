@@ -2142,7 +2142,7 @@
 
 <h2 id="width">width</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></p>
+<h5 id="example-values-100-200px-calc100---50px">EXAMPLE VALUES: <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></h5>
 
 <p><code class="highlighter-rouge">width</code> is very straightforward, but the most important thing to keep in mind is scalability on different screen sizes and when the browser window is resized.</p>
 
@@ -2152,7 +2152,7 @@
 
 <h2 id="height">height</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></p>
+<h5 id="example-values-100-200px-calc100---50px-1">EXAMPLE VALUES: <code class="highlighter-rouge">100%</code>, <code class="highlighter-rouge">200px</code>, <code class="highlighter-rouge">calc(100% - 50px)</code></h5>
 
 <p><code class="highlighter-rouge">height</code> is considered in much the same way as <code class="highlighter-rouge">width</code>, but is not as often set as a percentage (besides 100%).</p>
 
@@ -2160,7 +2160,7 @@
 
 <h2 id="padding">padding</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">1%</code></p>
+<h5 id="example-values-20px-1">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">1%</code></h5>
 
 <p>In the new box-model mode (<code class="highlighter-rouge">box-sizing: border-box;</code>), padding will push into the element.</p>
 
@@ -2182,7 +2182,7 @@
 
 <h2 id="margin">margin</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">0 auto</code></p>
+<h5 id="example-values-20px-0-auto">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">0 auto</code></h5>
 
 <p><code class="highlighter-rouge">margin</code> is always outside of the dimensions of your element and set the space around the element, relative to it’s neighbors. This being the case, be especially careful not to cause layout collisions. This happens a lot when combining margin with percentage-based widths.</p>
 
@@ -2203,7 +2203,7 @@
 
 <h2 id="border">border</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">1px solid $light-grey</code></p>
+<h5 id="example-values-1px-solid-light-grey">EXAMPLE VALUES: <code class="highlighter-rouge">1px solid $light-grey</code></h5>
 
 <p><code class="highlighter-rouge">border</code> is defined similar to padding and can be treated nearly the same. It can be defined on all sides at once or as individual attributes.</p>
 
@@ -2220,6 +2220,16 @@
     <span class="nl">border-color</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="border-radius">border-radius</h2>
+
+<h5 id="example-values-4px-50">EXAMPLE VALUES: <code class="highlighter-rouge">4px</code>, <code class="highlighter-rouge">50%</code></h5>
+
+<p><code class="highlighter-rouge">border-radius</code> affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round, forming a circle, for things like avatar images.</p>
+
+<p>It can be defined shorthand as top-left, top-right, bottom-right, bottom-left, or as individual values.</p>
 
     </div>
 
@@ -2488,14 +2498,14 @@
     <div class="post-content">
       <h2 id="font-family">font-family</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> Depends on your project.</p>
+<h5 id="example-values-depends-on-your-project">EXAMPLE VALUES: Depends on your project.</h5>
 
 <p>To set what font gets used, use the <code class="highlighter-rouge">font-family</code> property. In most of our projects this is done for you in our base css.</p>
 
 <p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
-    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">font-family</span><span class="o">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
@@ -2506,7 +2516,7 @@
 
 <h2 id="font-size">font-size</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">1.2rem</code>, <code class="highlighter-rouge">1.4rem</code>, <code class="highlighter-rouge">1.6rem</code></p>
+<h5 id="example-values-12px-12rem-14rem-16rem">EXAMPLE VALUES: <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">1.2rem</code>, <code class="highlighter-rouge">1.4rem</code>, <code class="highlighter-rouge">1.6rem</code></h5>
 
 <p><code class="highlighter-rouge">font-size</code> controls how big the words will appear.</p>
 
@@ -2516,22 +2526,22 @@
 
 <h3 id="usage">usage</h3>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="err">@include</span> <span class="err">font-size(1.6);</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
+  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="mi">.6</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
 <h3 id="outputs">outputs</h3>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.my-class</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1.6rem</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6rem</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
 <hr />
 
 <h2 id="color">color</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">$off-black</code>, <code class="highlighter-rouge">#ffffff</code>, <code class="highlighter-rouge">tint($mid-grey, 0.7)</code>, <code class="highlighter-rouge">$red</code>, <code class="highlighter-rouge">rgba(255, 255, 255, 0.5)</code></p>
+<h5 id="example-values-off-black-ffffff-tintmid-grey-07-red-rgba255-255-255-05">EXAMPLE VALUES: <code class="highlighter-rouge">$off-black</code>, <code class="highlighter-rouge">#ffffff</code>, <code class="highlighter-rouge">tint($mid-grey, 0.7)</code>, <code class="highlighter-rouge">$red</code>, <code class="highlighter-rouge">rgba(255, 255, 255, 0.5)</code></h5>
 
 <p><code class="highlighter-rouge">color</code> changes the color of the text.</p>
 
@@ -2541,40 +2551,83 @@
 
 <h2 id="line-height">line-height</h2>
 
-<p><strong>EXAMPLE VALUES:</strong> <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">30px</code></p>
+<h5 id="example-values-12px-30px">EXAMPLE VALUES: <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">30px</code></h5>
 
 <p><code class="highlighter-rouge">line-height</code> sets the vertical spacing between lines of text. We mostly use it to vertically center a single line of text. If there is a chance your text might wrap, use a different method as detailed by <a href="https://css-tricks.com/centering-css-complete-guide/">Centering in CSS: A Complete Guide, by CSS Tricks</a></p>
 
-<p><strong>todo explain how we do this to center texts in buttons</strong></p>
+<p>For buttons, we commonly set the line-height to the height of the button to center the text vertically within the button.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <hr />
 
 <h2 id="text-align">text-align</h2>
 
+<h5 id="example-values-center-left">EXAMPLE VALUES: <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">left</code></h5>
+
+<p><code class="highlighter-rouge">text-align</code> is fairly straightforward. It aligns text. <code class="highlighter-rouge">text-align: center;</code> should mostly only be used for text that does not wrap. Center-aligned text that wraps is more difficult to read.</p>
+
 <hr />
 
 <h2 id="font-weight">font-weight</h2>
+
+<h5 id="example-values-normal400-semibold600-bold700">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>/<code class="highlighter-rouge">400</code>, <code class="highlighter-rouge">semibold</code>/<code class="highlighter-rouge">600</code>, <code class="highlighter-rouge">bold</code>/<code class="highlighter-rouge">700</code></h5>
+
+<p><code class="highlighter-rouge">font-weight</code> tells the browser which cut of the given font you want to deliver to the browser. The numbers shown above generally correspond directly to the named weights beside them, though some font makers use different systems. These three are the most common values we use with Source Sans Pro.</p>
 
 <hr />
 
 <h2 id="font-style">font-style</h2>
 
+<h5 id="example-values-normal-italic">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">italic</code></h5>
+
+<p>This attribute is not as commonly used as some, but it’s good to know how to use it. The above values are basically all we use.</p>
+
 <hr />
 
 <h2 id="text-transform">text-transform</h2>
+
+<h5 id="example-values-normal-uppercase">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">uppercase</code></h5>
+
+<p><code class="highlighter-rouge">text-transform</code> will take the formatting of the given text and transform it to your defined value, most commonly to make something uppercase.</p>
+
+<p>Uppercase text can be difficult to read, though, so we often pair this with <code class="highlighter-rouge">font-weight</code> and <code class="highlighter-rouge">letter-spacing</code> to help with that, as seen below.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Shaun Fox<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.name</span> <span class="p">{</span>
+  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
 <hr />
 
 <h2 id="letter-spacing">letter-spacing</h2>
 
+<h5 id="example-values-1px-1em">EXAMPLE VALUES: <code class="highlighter-rouge">1px</code>, <code class="highlighter-rouge">1em</code></h5>
+
+<p>This is typically paired with <code class="highlighter-rouge">text-transform</code> as demonstrated above. It should only ever be used on uppercase text. If used with lowercase text, readability is sacrificed.</p>
+
 <hr />
 
 <h2 id="text-decoration">text-decoration</h2>
 
-<hr />
+<h5 id="example-values-none-underline">EXAMPLE VALUES: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">underline</code></h5>
 
-<h2 id="whitespace">whitespace</h2>
+<p><code class="highlighter-rouge">text-decoration</code> is most often used to override the default browser styling of anchor tags. Frequently we’ll set the anchor to <code class="highlighter-rouge">text-decoration: none</code>, which removes the underline, but we’ll give it other attributes that help define it as a link. For example:</p>
 
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.link</span> <span class="p">{</span>
+  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
+
+  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+  	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$blue</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
     </div>
 
