@@ -84,54 +84,54 @@ Use an h3 (`### Example`) to make a header for this section.
 
 - ~~General CSS education~~
 	- Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
-	    - ~~Text Handling~~ ---
-	        - ~~font-size~~
-	        - ~~font-weight~~
-	        - ~~line-height~~
-	        - ~~text-align~~
-	        - ~~letter-spacing~~
-	        - ~~text-transform~~
-	        - ~~text-decoration~~
-	        - ~~font-family~~
-	        - ~~font-style~~
-	        - ~~color~~
-	        - ~~whitespace~~ - ignoring for now
-	    - ~~Box Model~~ ---
-	        - ~~width~~
-	        - ~~height~~
-	        - ~~padding~~
-	        - ~~margin~~
-	        - ~~border~~
-	        - ~~border-radius~~
-	    - Display ---
-	        - inline
-	        - block
-	        - inline-block
-	        - table
-	    - Layout ---
-          - position (and top, left, right, bottom)
-	        - float (and clear)
-	        - z-index
-	        - vertical-align
-	        - transform (and transform-style)
-	    - SVG
-	        - fill
-	    - Psuedo elements ---
-	         - content (and psuedo elements)
-	         - before
-	         - after
-	    - Psudoselectors ---
-	        - hover
-	        - active
-	        - disabled
-	        - last-child
-	        - first-child
-	        - nth-child
-	    - Background (and background-color) ---
-	    - cursor ---
-	    - overflow ---
-	    - opacity ---
-	    - box-shadow ---
+			- ~~Text Handling~~ ---
+					- ~~font-size~~
+					- ~~font-weight~~
+					- ~~line-height~~
+					- ~~text-align~~
+					- ~~letter-spacing~~
+					- ~~text-transform~~
+					- ~~text-decoration~~
+					- ~~font-family~~
+					- ~~font-style~~
+					- ~~color~~
+					- ~~whitespace~~ - ignoring for now
+			- ~~Box Model~~ ---
+					- ~~width~~
+					- ~~height~~
+					- ~~padding~~
+					- ~~margin~~
+					- ~~border~~
+					- ~~border-radius~~
+			- Display ---
+					- inline
+					- block
+					- inline-block
+					- table
+			- Layout ---
+					- position (and top, left, right, bottom)
+					- float (and clear)
+					- z-index
+					- vertical-align
+					- transform (and transform-style)
+			- SVG
+					- fill
+			- Psuedo elements ---
+					 - content (and psuedo elements)
+					 - before
+					 - after
+			- Psudoselectors ---
+					- hover
+					- active
+					- disabled
+					- last-child
+					- first-child
+					- nth-child
+			- Background (and background-color) ---
+			- cursor ---
+			- overflow ---
+			- opacity ---
+			- box-shadow ---
 	- Break these out into their own sections
 - ~~SCSS Variables~~
 - ~~Color Variables and Functions~~
