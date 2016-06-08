@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>CSS Display</title>
-  <meta name="description" content="  “Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves.” —CSS Tricks">
+  <meta name="description" content="EXAMPLE VALUES: inline, block, inline-block, table, none">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -2040,11 +2040,43 @@
 	</header>
 
 	<div class="post-content">
-		<blockquote>
+		<h5 id="example-values-inline-block-inline-block-table-none">EXAMPLE VALUES: <code class="highlighter-rouge">inline</code>, <code class="highlighter-rouge">block</code>, <code class="highlighter-rouge">inline-block</code>, <code class="highlighter-rouge">table</code>, <code class="highlighter-rouge">none</code></h5>
+
+<blockquote>
   <p>“Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves.” —CSS Tricks</p>
 </blockquote>
 
 <p><a href="https://css-tricks.com/almanac/properties/d/display/">https://css-tricks.com/almanac/properties/d/display/</a></p>
+
+<hr />
+
+<h2 id="display-inline">display: inline;</h2>
+
+<p>These elements are things that behave like text. They’re primarily relative to a baseline and don’t have much ability to affect the layout of other elements on the page.</p>
+
+<hr />
+
+<h2 id="display-block">display: block;</h2>
+
+<p>These elements are things like <code class="highlighter-rouge">&lt;div&gt;</code> and <code class="highlighter-rouge">&lt;section&gt;</code>. They will behave like rectangles and they’re the building blocks of web layouts.</p>
+
+<hr />
+
+<h2 id="display-inline-block">display: inline-block;</h2>
+
+<p>This is kind of a mix of the two above. You can set some of the same “physical” characteristics of <code class="highlighter-rouge">block</code>, but the element is still relative to a baseline (of text, for instance).</p>
+
+<hr />
+
+<h2 id="display-table">display: table</h2>
+
+<p>This can be used to make regular block elements behave more like a table. For example, a parent element can be set to <code class="highlighter-rouge">display: table;</code> and it will have children set to <code class="highlighter-rouge">display: table-row;</code> and <code class="highlighter-rouge">display: table-cell;</code>. This can be especially helpful when you need to display tabular data but also need to support a responsive environment.</p>
+
+<hr />
+
+<h2 id="display-none">display: none</h2>
+
+<p>The easiest way to hide elements on the page.</p>
 
 	</div>
 

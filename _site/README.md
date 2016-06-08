@@ -103,11 +103,12 @@ Use an h3 (`### Example`) to make a header for this section.
           - ~~margin~~
           - ~~border~~
           - ~~border-radius~~
-      - Display ---
-          - inline
-          - block
-          - inline-block
-          - table
+      - ~~Display~~ ---
+          - ~~inline~~
+          - ~~block~~
+          - ~~inline-block~~
+          - ~~table~~
+          - ~~none~~
       - Layout ---
           - position (and top, left, right, bottom)
           - float (and clear)

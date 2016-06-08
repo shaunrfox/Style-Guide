@@ -65,7 +65,7 @@ In the new box-model mode (`box-sizing: border-box;`), padding will push into th
 
 `margin` is always outside of the dimensions of your element and set the space around the element, relative to it's neighbors. This being the case, be especially careful not to cause layout collisions. This happens a lot when combining margin with percentage-based widths.
 
-A common trick for horizontally centering an element inside a larger parent is to set `margin: 0 auto;`. The `0` defines the top and bottom margin (a shorthand), and the auto defines the right and left. It should be noted that this only works if the element also has a width set.
+A common trick for horizontally centering an element inside a larger parent is to set `margin: 0 auto;`. The `0` defines the top and bottom margin (a shorthand), and the `auto` defines the right and left. It should be noted that this only works if the element also has a width set.
 
 {% highlight scss %}
 .parent-element {
