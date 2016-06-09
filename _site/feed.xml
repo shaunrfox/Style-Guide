@@ -6,8 +6,8 @@
 </description>
     <link>/style-guide/</link>
     <atom:link href="/style-guide/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Jun 2016 15:04:10 -0500</pubDate>
-    <lastBuildDate>Wed, 08 Jun 2016 15:04:10 -0500</lastBuildDate>
+    <pubDate>Thu, 09 Jun 2016 10:06:04 -0500</pubDate>
+    <lastBuildDate>Thu, 09 Jun 2016 10:06:04 -0500</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -61,7 +61,7 @@
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; changes the color of the text.&lt;/p&gt;
 
-&lt;p&gt;In our code, we have variables corresponding to color variables. &lt;a href=&quot;/style-guide/#scss-color-variables&quot;&gt;SCSS Color Variables&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In our code, we have variables corresponding to color variables. &lt;a href=&quot;#scss-color-variables&quot;&gt;SCSS Color Variables&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -300,7 +300,7 @@
     
       <item>
         <title>CSS Box Model</title>
-        <description>&lt;p&gt;The Box-model is the basis for the strucure of elements on the web. Elements are defined in space by firstly their &lt;a href=&quot;/style-guide/#css-display&quot;&gt;display-type&lt;/a&gt;, then their width and height, followed by other attributes such as padding, margin, and border.&lt;/p&gt;
+        <description>&lt;p&gt;The Box-model is the basis for the strucure of elements on the web. Elements are defined in space by firstly their &lt;a href=&quot;#css-display&quot;&gt;display-type&lt;/a&gt;, then their width and height, followed by other attributes such as padding, margin, and border.&lt;/p&gt;
 
 &lt;h2 id=&quot;box-sizing&quot;&gt;box-sizing&lt;/h2&gt;
 

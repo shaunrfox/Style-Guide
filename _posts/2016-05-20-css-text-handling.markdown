@@ -60,7 +60,7 @@ As part of our code, we have a mixin that you should use in most cases. It will 
 
 `color` changes the color of the text.
 
-In our code, we have variables corresponding to color variables. [SCSS Color Variables]({{site.baseurl}}/#scss-color-variables )
+In our code, we have variables corresponding to color variables. [SCSS Color Variables](#scss-color-variables )
 
 ---
 

@@ -7,30 +7,29 @@
 	var hash;
 	var $root;
 
-	$('nav li a, .post-title-hash, .table a').click(function() {
-		var correctSection = $(this).attr("data-id");
-		var sectionOffset = $("#" + correctSection);
+	$("a").click(function(anchor) {
 
-		$root.animate({
-			scrollTop: $(sectionOffset).offset().top
-		}, 500, function () {
-			window.location.hash = correctSection;
-		});
-		return false;
+		if ( $(this).attr("href").charAt(0) !== "#" ) {
+			return;
+		}
+
+		anchor.preventDefault();
+		var linkyLinky = $(this).attr("href");
+		animateScroll(linkyLinky);
+		console.log("linkyLinky: " + linkyLinky);
 	});
 
-	$('.logo').click(function() {
+	function animateScroll(linkyLinky) {
 		$root.animate({
-			scrollTop: $('#intro').offset().top
+			scrollTop: $(linkyLinky).offset().top
 		}, 500, function () {
-			window.location.hash = "#intro";
+			window.location.hash = linkyLinky;
 		});
-		return false;
-	});
+	}
 
 	// Highlight nav when section is in viewport
 	// - Define Viewport
-	$.fn.isOnScreen = function(){
+	function isOnScreen(element) {
 		var win = $(window);
 		var viewport = {
 			top : win.scrollTop(),
@@ -40,9 +39,9 @@
 		viewport.right = viewport.left + win.width();
 		viewport.bottom = viewport.top + win.height();
 
-		var bounds = this.offset();
-		bounds.right = bounds.left + this.outerWidth();
-		bounds.bottom = bounds.top + this.outerHeight();
+		var bounds = element.offset();
+		bounds.right = bounds.left + element.outerWidth();
+		bounds.bottom = bounds.top + element.outerHeight();
 
 		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 	};
@@ -52,7 +51,7 @@
 		$("section.post").each(function() {
 			var onScreenId = $(this).attr("id");
 
-			if ( $(this).isOnScreen() ) {
+			if ( isOnScreen($(this)) ) {
 				$("#link-" + onScreenId).addClass("active");
 			} else {
 				$("#link-" + onScreenId).removeClass("active");

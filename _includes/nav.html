@@ -11,7 +11,7 @@
 	<ul>
 		{% assign all-posts = (site.posts | sort: 'title') %}
     {% for post in all-posts %}
-      <li data-filter-id="{{ post.slug }}"><a class="page-link" href="#{{ post.slug }}" data-id="{{ post.slug }}" id="link-{{ post.slug }}">{{ post.title }}</a></li>
+      <li data-filter-id="{{ post.slug }}"><a class="page-link" href="#{{ post.slug }}" id="link-{{ post.slug }}">{{ post.title }}</a></li>
     {% endfor %}
 	</ul>
 </nav>

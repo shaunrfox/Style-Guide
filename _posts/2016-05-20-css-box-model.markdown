@@ -5,7 +5,7 @@ date:   2016-05-20
 categories: CSS
 ---
 
-The Box-model is the basis for the strucure of elements on the web. Elements are defined in space by firstly their [display-type](/style-guide/#css-display), then their width and height, followed by other attributes such as padding, margin, and border.
+The Box-model is the basis for the strucure of elements on the web. Elements are defined in space by firstly their [display-type](#css-display), then their width and height, followed by other attributes such as padding, margin, and border.
 
 ## box-sizing
 
