@@ -2049,10 +2049,10 @@
 <p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="n">font-family</span><span class="o">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
+<p>In this example Verdana will be used if the broswer does not have access to “Source Sans Pro”, then Helvetica, etc…</p>
 
 <p>If you want to have them download a font, you’ll want to use <code class="highlighter-rouge">@font-face</code>. Here’s a helpful resource <strong>TODO PROVIDE RESOURCE</strong></p>
 
@@ -2064,7 +2064,7 @@
 
 <p><code class="highlighter-rouge">font-size</code> controls how big the words will appear.</p>
 
-<p>There are several units you can use, but we recommend pixels and root ems. Root ems are a percentage of the font size set on the html element.</p>
+<p>There are several units you can use, but we recommend pixels (<code class="highlighter-rouge">px</code>) and root ems (<code class="highlighter-rouge">rem</code>). Root ems are a percentage of the font size set on the html element.</p>
 
 <p>As part of our code, we have a mixin that you should use in most cases. It will take care of both rems and a pixel fallback.</p>
 
@@ -2089,7 +2089,7 @@
 
 <p><code class="highlighter-rouge">color</code> changes the color of the text.</p>
 
-<p>In our code, we have variables corresponding to color variables. <a href="#scss-color-variables">SCSS Color Variables</a></p>
+<p>In our code, we have variables corresponding to color values. <a href="#scss-color-variables">SCSS Color Variables</a></p>
 
 <hr />
 
@@ -2128,7 +2128,7 @@
 
 <h5 id="example-values-normal-italic">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">italic</code></h5>
 
-<p>This attribute is not as commonly used as some, but it’s good to know how to use it. The above values are basically all we use.</p>
+<p>This attribute is basically used to set the text to italic. You only really need to set it to <code class="highlighter-rouge">normal</code> if you’re overriding the <code class="highlighter-rouge">italic</code>.</p>
 
 <hr />
 
@@ -2172,6 +2172,14 @@
   	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$blue</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="white-space">white-space</h2>
+
+<h5 id="example-values-nowrap">EXAMPLE VALUES: <code class="highlighter-rouge">nowrap</code></h5>
+
+<p>We primarily use <code class="highlighter-rouge">white-space: nowrap</code> to force text to be one line, without wrapping. Most often used in conjunction with CSS truncation.</p>
 
 	</div>
 

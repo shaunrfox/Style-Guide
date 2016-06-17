@@ -15,11 +15,11 @@ However, if you want to change what font is used, you should have numerous fallb
 
 {% highlight scss %}
 .my-class {
-  font-family: font-family: "Source Sans Pro", Verdana, Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Verdana, Helvetica, Arial, sans-serif;
 }
 {% endhighlight %}
 
-In this example Helvetica will be used if it's installed on the users computer. If not, it'll fall back to Arial, etc...
+In this example Verdana will be used if the broswer does not have access to "Source Sans Pro", then Helvetica, etc...
 
 If you want to have them download a font, you'll want to use `@font-face`. Here's a helpful resource **TODO PROVIDE RESOURCE**
 
@@ -31,7 +31,7 @@ If you want to have them download a font, you'll want to use `@font-face`. Here'
 
 `font-size` controls how big the words will appear.
 
-There are several units you can use, but we recommend pixels and root ems. Root ems are a percentage of the font size set on the html element.
+There are several units you can use, but we recommend pixels (`px`) and root ems (`rem`). Root ems are a percentage of the font size set on the html element.
 
 As part of our code, we have a mixin that you should use in most cases. It will take care of both rems and a pixel fallback.
 
@@ -60,7 +60,7 @@ As part of our code, we have a mixin that you should use in most cases. It will 
 
 `color` changes the color of the text.
 
-In our code, we have variables corresponding to color variables. [SCSS Color Variables](#scss-color-variables )
+In our code, we have variables corresponding to color values. [SCSS Color Variables](#scss-color-variables )
 
 ---
 
@@ -101,7 +101,7 @@ For buttons, we commonly set the line-height to the height of the button to cent
 
 ##### EXAMPLE VALUES: `normal`, `italic`
 
-This attribute is not as commonly used as some, but it's good to know how to use it. The above values are basically all we use.
+This attribute is basically used to set the text to italic. You only really need to set it to `normal` if you're overriding the `italic`.
 
 ---
 
@@ -151,3 +151,11 @@ This is typically paired with `text-transform` as demonstrated above. It should 
   }
 }
 {% endhighlight %}
+
+---
+
+## white-space
+
+##### EXAMPLE VALUES: `nowrap`
+
+We primarily use `white-space: nowrap` to force text to be one line, without wrapping. Most often used in conjunction with CSS truncation.

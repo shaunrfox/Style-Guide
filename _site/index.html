@@ -2109,7 +2109,51 @@
     </div>
 
     <div class="post-content">
-      <p>background</p>
+      <p>background, background-color, background-image, background-position, background-repeat, background-size</p>
+
+<p><code class="highlighter-rouge">background</code> is one of the most common properties we set. It can be used shorthand or broken out into more specific properties.</p>
+
+<h2 id="set-a-background-color">Set a background color</h2>
+
+<p>When setting a background color, use <code class="highlighter-rouge">background: $light-grey</code>. Even when overriding for something like a hover state, still just use <code class="highlighter-rouge">background</code>, rather than <code class="highlighter-rouge">background-color</code>.</p>
+
+<hr />
+
+<h2 id="set-a-background-image">Set a background image</h2>
+
+<p>Using an image as a background can be complicated. The easiest way to do this, without digging in too much, is to set the <code class="highlighter-rouge">background-image: url()</code> and use the provided mixin.</p>
+
+<h3 id="example">Example</h3>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Here's the mixin
+</span><span class="k">@mixin</span> <span class="nf">background-image</span><span class="p">(){</span>
+  <span class="nl">background-repeat</span><span class="p">:</span> <span class="nb">no-repeat</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+  <span class="nl">background-position</span><span class="p">:</span> <span class="nb">center</span> <span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Here's how to use it
+</span><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('.../image.jpg')</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">background-image</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Using this method, you can also set a fallback image by having multiple values in the <code class="highlighter-rouge">background-image</code>. This is helpful when you’re not hosting the source of the image you want to set.</p>
+
+<h3 id="example-1">Example</h3>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.element</span> <span class="p">{</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('http://twitter.com/.../avatar.jpg')</span><span class="o">,</span> <span class="sx">url('.../backup-image.jpg')</span><span class="p">;</span>
+  <span class="k">@include</span> <span class="nd">background-image</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="background-size-cover-vs-contain">background-size: cover vs. contain</h2>
+
+<p><code class="highlighter-rouge">background-size: cover</code> will stretch the image to cover the entire element, no matter the proportions, but it will keep the image’s original aspect ratio.</p>
+
+<p><code class="highlighter-rouge">background-size: contain</code> will constrain the image to fit within the bounds of the element, but will always keep the entire image visible.</p>
 
     </div>
 
@@ -2148,6 +2192,10 @@
 
 <p>To accomodate the different environments that a site could be viewed in, favor setting percentage-based widths.</p>
 
+<p>Any percentage-based width used is going to be relative to the element’s parent.</p>
+
+<p><code class="highlighter-rouge">calc()</code> is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won’t work.</p>
+
 <hr />
 
 <h2 id="height">height</h2>
@@ -2156,11 +2204,15 @@
 
 <p><code class="highlighter-rouge">height</code> is considered in much the same way as <code class="highlighter-rouge">width</code>, but is not as often set as a percentage (besides 100%).</p>
 
+<p>Any percentage-based height used is going to be relative to the element’s parent.</p>
+
+<p><code class="highlighter-rouge">calc()</code> is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won’t work.</p>
+
 <hr />
 
 <h2 id="padding">padding</h2>
 
-<h5 id="example-values-20px-1">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">1%</code></h5>
+<h5 id="example-values-20px">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code></h5>
 
 <p>In the new box-model mode (<code class="highlighter-rouge">box-sizing: border-box;</code>), padding will push into the element.</p>
 
@@ -2227,7 +2279,7 @@
 
 <h5 id="example-values-4px-50">EXAMPLE VALUES: <code class="highlighter-rouge">4px</code>, <code class="highlighter-rouge">50%</code></h5>
 
-<p><code class="highlighter-rouge">border-radius</code> affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round, forming a circle, for things like avatar images.</p>
+<p><code class="highlighter-rouge">border-radius</code> affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round (<code class="highlighter-rouge">border-radius: 50%</code>), forming a circle, for things like avatar images.</p>
 
 <p>It can be defined shorthand as top-left, top-right, bottom-right, bottom-left, or as individual values.</p>
 
@@ -2300,11 +2352,15 @@
 
 <p>These elements are things that behave like text. They’re primarily relative to a baseline and don’t have much ability to affect the layout of other elements on the page.</p>
 
+<p>While many elements’ default state is inline, it’s not something that we set as an override very often, since we’re mostly wanting to deal with boxy things.</p>
+
 <hr />
 
 <h2 id="display-block">display: block;</h2>
 
 <p>These elements are things like <code class="highlighter-rouge">&lt;div&gt;</code> and <code class="highlighter-rouge">&lt;section&gt;</code>. They will behave like rectangles and they’re the building blocks of web layouts.</p>
+
+<p>The default width for <code class="highlighter-rouge">block</code> elements is 100%, so they will stretch to the extent of their parent’s width.</p>
 
 <hr />
 
@@ -2312,11 +2368,17 @@
 
 <p>This is kind of a mix of the two above. You can set some of the same “physical” characteristics of <code class="highlighter-rouge">block</code>, but the element is still relative to a baseline (of text, for instance).</p>
 
+<p>The default width for <code class="highlighter-rouge">inline-block</code> elements is relative to the element’s contents.</p>
+
+<p>If you want to center an element using <code class="highlighter-rouge">inline-block</code>, you must set <code class="highlighter-rouge">text-align: center</code> on it’s parent.</p>
+
 <hr />
 
 <h2 id="display-table">display: table</h2>
 
 <p>This can be used to make regular block elements behave more like a table. For example, a parent element can be set to <code class="highlighter-rouge">display: table;</code> and it will have children set to <code class="highlighter-rouge">display: table-row;</code> and <code class="highlighter-rouge">display: table-cell;</code>. This can be especially helpful when you need to display tabular data but also need to support a responsive environment.</p>
+
+<p>Try to limit use of <code class="highlighter-rouge">display: table</code> unless you’re showing tabluar data.</p>
 
 <hr />
 
@@ -2537,10 +2599,10 @@
 <p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
 
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="n">font-family</span><span class="o">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>In this example Helvetica will be used if it’s installed on the users computer. If not, it’ll fall back to Arial, etc…</p>
+<p>In this example Verdana will be used if the broswer does not have access to “Source Sans Pro”, then Helvetica, etc…</p>
 
 <p>If you want to have them download a font, you’ll want to use <code class="highlighter-rouge">@font-face</code>. Here’s a helpful resource <strong>TODO PROVIDE RESOURCE</strong></p>
 
@@ -2552,7 +2614,7 @@
 
 <p><code class="highlighter-rouge">font-size</code> controls how big the words will appear.</p>
 
-<p>There are several units you can use, but we recommend pixels and root ems. Root ems are a percentage of the font size set on the html element.</p>
+<p>There are several units you can use, but we recommend pixels (<code class="highlighter-rouge">px</code>) and root ems (<code class="highlighter-rouge">rem</code>). Root ems are a percentage of the font size set on the html element.</p>
 
 <p>As part of our code, we have a mixin that you should use in most cases. It will take care of both rems and a pixel fallback.</p>
 
@@ -2577,7 +2639,7 @@
 
 <p><code class="highlighter-rouge">color</code> changes the color of the text.</p>
 
-<p>In our code, we have variables corresponding to color variables. <a href="#scss-color-variables">SCSS Color Variables</a></p>
+<p>In our code, we have variables corresponding to color values. <a href="#scss-color-variables">SCSS Color Variables</a></p>
 
 <hr />
 
@@ -2616,7 +2678,7 @@
 
 <h5 id="example-values-normal-italic">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">italic</code></h5>
 
-<p>This attribute is not as commonly used as some, but it’s good to know how to use it. The above values are basically all we use.</p>
+<p>This attribute is basically used to set the text to italic. You only really need to set it to <code class="highlighter-rouge">normal</code> if you’re overriding the <code class="highlighter-rouge">italic</code>.</p>
 
 <hr />
 
@@ -2660,6 +2722,14 @@
   	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$blue</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
+
+<hr />
+
+<h2 id="white-space">white-space</h2>
+
+<h5 id="example-values-nowrap">EXAMPLE VALUES: <code class="highlighter-rouge">nowrap</code></h5>
+
+<p>We primarily use <code class="highlighter-rouge">white-space: nowrap</code> to force text to be one line, without wrapping. Most often used in conjunction with CSS truncation.</p>
 
     </div>
 

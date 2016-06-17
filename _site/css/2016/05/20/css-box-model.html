@@ -2060,6 +2060,10 @@
 
 <p>To accomodate the different environments that a site could be viewed in, favor setting percentage-based widths.</p>
 
+<p>Any percentage-based width used is going to be relative to the element’s parent.</p>
+
+<p><code class="highlighter-rouge">calc()</code> is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won’t work.</p>
+
 <hr />
 
 <h2 id="height">height</h2>
@@ -2068,11 +2072,15 @@
 
 <p><code class="highlighter-rouge">height</code> is considered in much the same way as <code class="highlighter-rouge">width</code>, but is not as often set as a percentage (besides 100%).</p>
 
+<p>Any percentage-based height used is going to be relative to the element’s parent.</p>
+
+<p><code class="highlighter-rouge">calc()</code> is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won’t work.</p>
+
 <hr />
 
 <h2 id="padding">padding</h2>
 
-<h5 id="example-values-20px-1">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code>, <code class="highlighter-rouge">1%</code></h5>
+<h5 id="example-values-20px">EXAMPLE VALUES: <code class="highlighter-rouge">20px</code></h5>
 
 <p>In the new box-model mode (<code class="highlighter-rouge">box-sizing: border-box;</code>), padding will push into the element.</p>
 
@@ -2139,7 +2147,7 @@
 
 <h5 id="example-values-4px-50">EXAMPLE VALUES: <code class="highlighter-rouge">4px</code>, <code class="highlighter-rouge">50%</code></h5>
 
-<p><code class="highlighter-rouge">border-radius</code> affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round, forming a circle, for things like avatar images.</p>
+<p><code class="highlighter-rouge">border-radius</code> affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round (<code class="highlighter-rouge">border-radius: 50%</code>), forming a circle, for things like avatar images.</p>
 
 <p>It can be defined shorthand as top-left, top-right, bottom-right, bottom-left, or as individual values.</p>
 

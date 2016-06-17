@@ -25,6 +25,10 @@ Here's a live Codepen example: <http://codepen.io/shaunrfox/pen/raojBW/>
 
 To accomodate the different environments that a site could be viewed in, favor setting percentage-based widths.
 
+Any percentage-based width used is going to be relative to the element's parent.
+
+`calc()` is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won't work.
+
 ---
 
 ## height
@@ -33,11 +37,15 @@ To accomodate the different environments that a site could be viewed in, favor s
 
 `height` is considered in much the same way as `width`, but is not as often set as a percentage (besides 100%).
 
+Any percentage-based height used is going to be relative to the element's parent.
+
+`calc()` is usually used to make something fill a space, minus a pixel value. For instance having a scrollable area, minus the header. Make sure to leave a single space on either side of your operator or it won't work.
+
 ---
 
 ## padding
 
-##### EXAMPLE VALUES: `20px`, `1%`
+##### EXAMPLE VALUES: `20px`
 
 In the new box-model mode (`box-sizing: border-box;`), padding will push into the element.
 
@@ -110,6 +118,6 @@ We most commonly use the shorthand definitions listed below, but they can also b
 
 ##### EXAMPLE VALUES: `4px`, `50%`
 
-`border-radius` affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round, forming a circle, for things like avatar images.
+`border-radius` affects the corners of things. It can be used to give subtle rounded-corners to things like buttons, or to make element corners completely round (`border-radius: 50%`), forming a circle, for things like avatar images.
 
 It can be defined shorthand as top-left, top-right, bottom-right, bottom-left, or as individual values.

@@ -95,7 +95,7 @@ Use an h3 (`### Example`) to make a header for this section.
           - ~~font-family~~
           - ~~font-style~~
           - ~~color~~
-          - ~~whitespace~~ - ignoring for now
+          - ~~whitespace~~
       - ~~Box Model~~ ---
           - ~~width~~
           - ~~height~~

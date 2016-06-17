@@ -2054,11 +2054,15 @@
 
 <p>These elements are things that behave like text. They’re primarily relative to a baseline and don’t have much ability to affect the layout of other elements on the page.</p>
 
+<p>While many elements’ default state is inline, it’s not something that we set as an override very often, since we’re mostly wanting to deal with boxy things.</p>
+
 <hr />
 
 <h2 id="display-block">display: block;</h2>
 
 <p>These elements are things like <code class="highlighter-rouge">&lt;div&gt;</code> and <code class="highlighter-rouge">&lt;section&gt;</code>. They will behave like rectangles and they’re the building blocks of web layouts.</p>
+
+<p>The default width for <code class="highlighter-rouge">block</code> elements is 100%, so they will stretch to the extent of their parent’s width.</p>
 
 <hr />
 
@@ -2066,11 +2070,17 @@
 
 <p>This is kind of a mix of the two above. You can set some of the same “physical” characteristics of <code class="highlighter-rouge">block</code>, but the element is still relative to a baseline (of text, for instance).</p>
 
+<p>The default width for <code class="highlighter-rouge">inline-block</code> elements is relative to the element’s contents.</p>
+
+<p>If you want to center an element using <code class="highlighter-rouge">inline-block</code>, you must set <code class="highlighter-rouge">text-align: center</code> on it’s parent.</p>
+
 <hr />
 
 <h2 id="display-table">display: table</h2>
 
 <p>This can be used to make regular block elements behave more like a table. For example, a parent element can be set to <code class="highlighter-rouge">display: table;</code> and it will have children set to <code class="highlighter-rouge">display: table-row;</code> and <code class="highlighter-rouge">display: table-cell;</code>. This can be especially helpful when you need to display tabular data but also need to support a responsive environment.</p>
+
+<p>Try to limit use of <code class="highlighter-rouge">display: table</code> unless you’re showing tabluar data.</p>
 
 <hr />
 
