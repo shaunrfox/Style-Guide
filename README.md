@@ -142,3 +142,4 @@ Use an h3 (`### Example`) to make a header for this section.
 - CSS Problem Solving
 - Inline Styling
 - Pseudo Element Primer
+- CSS Transitions
