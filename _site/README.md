@@ -109,12 +109,12 @@ Use an h3 (`### Example`) to make a header for this section.
           - ~~inline-block~~
           - ~~table~~
           - ~~none~~
-      - Layout ---
-          - position (and top, left, right, bottom)
-          - float (and clear)
-          - z-index
-          - vertical-align
-          - transform (and transform-style)
+      - ~~Layout~~ ---
+          - ~~position (and top, left, right, bottom)~~
+          - ~~float (and clear)~~
+          - ~~z-index~~
+          - ~~vertical-align~~
+          - ~~transform (and transform-style)~~
       - SVG
           - fill
       - Psuedo elements ---

@@ -6,8 +6,8 @@
 </description>
     <link>/style-guide/</link>
     <atom:link href="/style-guide/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jun 2016 13:59:59 -0500</pubDate>
-    <lastBuildDate>Fri, 17 Jun 2016 13:59:59 -0500</lastBuildDate>
+    <pubDate>Fri, 08 Jul 2016 13:52:40 -0500</pubDate>
+    <lastBuildDate>Fri, 08 Jul 2016 13:52:40 -0500</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -216,11 +216,88 @@
     
       <item>
         <title>CSS Layout</title>
-        <description>&lt;p&gt;position, z-index, top, right, bottom, left, float, clear, vertical-align, transform&lt;/p&gt;
+        <description>&lt;h2 id=&quot;position&quot;&gt;position&lt;/h2&gt;
 
-&lt;p&gt;The position property sets the location of elements on the page.&lt;/p&gt;
+&lt;h5 id=&quot;example-values-relative-absolute-fixed&quot;&gt;EXAMPLE VALUES: &lt;code class=&quot;highlighter-rouge&quot;&gt;relative&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;fixed&lt;/code&gt;&lt;/h5&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/almanac/properties/p/position/&quot;&gt;https://css-tricks.com/almanac/properties/p/position/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The position property manipulates the location of an element. Each value of this property will affect the element in a different way.&lt;/p&gt;
+
+&lt;h3 id=&quot;static&quot;&gt;static&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;static&lt;/code&gt; is the default position value of all elements on the web. If you don’t set the position explicitly, this is the position your element has.&lt;/p&gt;
+
+&lt;h3 id=&quot;relative&quot;&gt;relative&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;relative&lt;/code&gt; positioning will layout relative to it’s normal position. You can affect the position of the element by adding additional positioning properties, like &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;bottom&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;left&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;z-index&lt;/code&gt;. This will remain in the flow of other elements on the page.&lt;/p&gt;
+
+&lt;h3 id=&quot;absolute&quot;&gt;absolute&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;absolute&lt;/code&gt; positioning is always relative to it’s closest parent with &lt;code class=&quot;highlighter-rouge&quot;&gt;relative&lt;/code&gt; positioning. This will also be pulled out of the normal flow of the page, so it can overlap other elements.&lt;/p&gt;
+
+&lt;h3 id=&quot;fixed&quot;&gt;fixed&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fixed&lt;/code&gt; positioning is always relative to the &lt;em&gt;viewport&lt;/em&gt;, meaning it always stays in place, even when the page is scrolled. This is rarely used except sometime for things like headers, footers, or modals.&lt;/p&gt;
+
+&lt;h3 id=&quot;top-right-bottom-left&quot;&gt;top, right, bottom, left&lt;/h3&gt;
+
+&lt;h5 id=&quot;example-values-0-100--20px&quot;&gt;EXAMPLE VALUES: &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;100%&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-20px&lt;/code&gt;&lt;/h5&gt;
+
+&lt;p&gt;These properties are used in conjunction with &lt;code class=&quot;highlighter-rouge&quot;&gt;relative&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;fixed&lt;/code&gt; positioning.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.parent-element&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.child-element&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;c1&quot;&gt;// 20px from the top, left corner of it&#39;s parent, regardless of padding or other sibling elements.
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;z-index&quot;&gt;z-index&lt;/h2&gt;
+
+&lt;h5 id=&quot;example-values-1--1-25&quot;&gt;EXAMPLE VALUES: &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;-1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;25&lt;/code&gt;&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. z-index only effects elements that have a position value other than static (the default). —CSS-Tricks&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Be both conscious and sensible with your z-index values. Avoid tacking on lots of zeros, but also leave yourself room to fill in between values if you need to.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;float&quot;&gt;float&lt;/h2&gt;
+
+&lt;h5 id=&quot;example-values-left-right-none&quot;&gt;EXAMPLE VALUES: &lt;code class=&quot;highlighter-rouge&quot;&gt;left&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;right&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;none&lt;/code&gt;&lt;/h5&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;float&lt;/code&gt; is usually used when you want two or more block elements to be side-by-side. It’s easiest to see in a visual example: &lt;a href=&quot;http://codepen.io/bxyoung89/pen/WbLRve&quot;&gt;http://codepen.io/bxyoung89/pen/WbLRve&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;clear&quot;&gt;clear&lt;/h3&gt;
+
+&lt;p&gt;If you float things, the parent is not aware of their height. Using a clear fix solution forces the parent to respond to the height of it’s children.&lt;/p&gt;
+
+&lt;p&gt;You should use our handy mixin: &lt;code class=&quot;highlighter-rouge&quot;&gt;@include clearfix();&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;transform&quot;&gt;transform&lt;/h2&gt;
+
+&lt;h5 id=&quot;example-values-translatey-50&quot;&gt;EXAMPLE VALUES: &lt;code class=&quot;highlighter-rouge&quot;&gt;translateY(-50%)&lt;/code&gt;&lt;/h5&gt;
+
+&lt;p&gt;You can do a lot of things with transform, but usually we only use it for vertical centering. You should be careful with this property because it does not necessarily respect round pixel values and can cause things to become blurry.&lt;/p&gt;
+
+&lt;p&gt;Our mixin: &lt;code class=&quot;highlighter-rouge&quot;&gt;@include vertical-align();&lt;/code&gt; will vertically center a block element with unknown height inside a parent that’s larger (most of the time). (not to be confused with the &lt;code class=&quot;highlighter-rouge&quot;&gt;vertical-align&lt;/code&gt; property)&lt;/p&gt;
+
+&lt;p&gt;More info here: &lt;a href=&quot;https://css-tricks.com/centering-css-complete-guide/&quot;&gt;https://css-tricks.com/centering-css-complete-guide/&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;vertical-align&quot;&gt;vertical-align&lt;/h2&gt;
+
+&lt;p&gt;This is primarily used for aligning a collection of elements with &lt;code class=&quot;highlighter-rouge&quot;&gt;display: inline-block;&lt;/code&gt;. You’ll usually set this to &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; so that the elements’ tops all line up.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 May 2016 00:00:00 -0500</pubDate>
         <link>/style-guide/css/2016/05/20/css-layout.html</link>
