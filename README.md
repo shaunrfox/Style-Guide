@@ -133,13 +133,13 @@ Use an h3 (`### Example`) to make a header for this section.
       - overflow ---
       - opacity ---
       - box-shadow ---
-  - Break these out into their own sections
-- ~~SCSS Variables~~
-- ~~Color Variables and Functions~~
-- Mixins
-- Nesting in SCSS
-- Functions in SCSS
-- CSS Problem Solving
-- Inline Styling
-- Pseudo Element Primer
-- CSS Transitions
+      - Break these out into their own sections
+        - ~~SCSS Variables~~
+        - ~~Color Variables and Functions~~
+        - Mixins
+        - Nesting in SCSS
+        - Functions in SCSS
+        - CSS Problem Solving
+        - Inline Styling
+        - Pseudo Element Primer
+        - CSS Transitions
