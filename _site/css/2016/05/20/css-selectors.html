@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>CSS Text Handling</title>
-  <meta name="description" content="font-family">
+  <title>CSS Selectors</title>
+  <meta name="description" content="CSS selectors apply styling to all elements that match the given criteria.">
 
   <link rel="icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="/style-guide/assets/img/favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@
   <script src="/style-guide/assets/js/jquery-2.0.3.min.js"></script>
 
   <link rel="stylesheet" href="/style-guide/css/main.css">
-  <link rel="canonical" href="/style-guide/css/2016/05/20/css-text-handling.html">
+  <link rel="canonical" href="/style-guide/css/2016/05/20/css-selectors.html">
   <link rel="alternate" type="application/rss+xml" title="Front-end Style Guide" href="/style-guide/feed.xml">
 </head>
 
@@ -2042,146 +2042,81 @@
 	</header>
 
 	<div class="post-content">
-		<h2 id="font-family">font-family</h2>
+		<p>CSS selectors apply styling to all elements that match the given criteria.</p>
 
-<h5 id="example-values-depends-on-your-project">EXAMPLE VALUES: Depends on your project.</h5>
+<p>In CSS, specificity and order matters. The most specific match will always apply it’s styles, and if there’s a tie, the last in the source-order will win.</p>
 
-<p>To set what font gets used, use the <code class="highlighter-rouge">font-family</code> property. In most of our projects this is done for you in our base css.</p>
+<h2 id="class">.class</h2>
 
-<p>However, if you want to change what font is used, you should have numerous fallbacks like.</p>
+<p>This is the most common way to attach styling to an element. Creating a good system for your class name scheme will help avoid collisions and provide clarity for everyone on the project.</p>
 
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">"Source Sans Pro"</span><span class="o">,</span> <span class="n">Verdana</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<hr />
+
+<h2 id="element">element</h2>
+
+<p>This selector will affect all matching elements. For example, the css selector <code class="highlighter-rouge">div</code> will affect all <code class="highlighter-rouge">&lt;div&gt;</code> elements.</p>
+
+<hr />
+
+<h2 id="combining-selectors">Combining Selectors</h2>
+
+<p>Now that you know about the two basic selectors, there are various ways we can combine selectors to be more specific, or be more efficient.</p>
+
+<h3 id="selector-selector">selector, selector</h3>
+
+<p>To keep your code DRY, you can list selectors that will share the same attributes. You do this by putting all selectors in a comma separated list.</p>
+
+<h3 id="class-1class-2">.class-1.class-2</h3>
+
+<p>For an element that has multiple classes, the selector can be written: <code class="highlighter-rouge">.class-1.class-2</code>. It’s important to note that this selector is more specific then either classes on their own. If you use a property that has been defined on either of the individual classes, this new selector will override it. If there are properties that are unique to any of the selectors, that property will not be overridden. The determination of how these rules are applied is called “cascading”.</p>
+
+<h3 id="selector-selector-1">selector selector</h3>
+
+<p>Adding a space between selectors targets the first selector’s children, who match the second selector.</p>
+
+<h5 id="example">Example:</h5>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"class-1"</span> <span class="na">id=</span><span class="s">"div-1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"class-2"</span> <span class="na">id=</span><span class="s">"div-2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"class-2"</span> <span class="na">id=</span><span class="s">"div-3"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"class-2"</span> <span class="na">id=</span><span class="s">"div-4"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.class-1</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.class-2</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.class-1</span> <span class="nc">.class-2</span><span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>In this example Verdana will be used if the broswer does not have access to “Source Sans Pro”, then Helvetica, etc…</p>
+<p>In this example, div-1 will be red. div-2 and div-3 will be green. div-4 will be blue.</p>
 
-<p>If you want to have them download a font, you’ll want to use <code class="highlighter-rouge">@font-face</code>. Here’s a helpful resource <strong>TODO PROVIDE RESOURCE</strong></p>
+<h3 id="scss">SCSS</h3>
 
-<hr />
+<p>nesting
+&amp;</p>
 
-<h2 id="font-size">font-size</h2>
+<p>selector &gt; selector</p>
 
-<h5 id="example-values-12px-12rem-14rem-16rem">EXAMPLE VALUES: <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">1.2rem</code>, <code class="highlighter-rouge">1.4rem</code>, <code class="highlighter-rouge">1.6rem</code></h5>
+<p>attribute selectors
+data-
+input[type=”text”]
+[class=”ico-*”]</p>
 
-<p><code class="highlighter-rouge">font-size</code> controls how big the words will appear.</p>
+<p>browser prefixes</p>
 
-<p>There are several units you can use, but we recommend pixels (<code class="highlighter-rouge">px</code>) and root ems (<code class="highlighter-rouge">rem</code>). Root ems are a percentage of the font size set on the html element.</p>
+<p>@media Queries</p>
 
-<p>As part of our code, we have a mixin that you should use in most cases. It will take care of both rems and a pixel fallback.</p>
-
-<h3 id="usage">usage</h3>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="k">@include</span> <span class="nd">font-size</span><span class="p">(</span><span class="m">1</span><span class="mi">.6</span><span class="p">);</span>
-<span class="p">}</span></code></pre></figure>
-
-<h3 id="outputs">outputs</h3>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.my-class</span> <span class="p">{</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6rem</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<hr />
-
-<h2 id="color">color</h2>
-
-<h5 id="example-values-off-black-ffffff-tintmid-grey-07-red-rgba255-255-255-05">EXAMPLE VALUES: <code class="highlighter-rouge">$off-black</code>, <code class="highlighter-rouge">#ffffff</code>, <code class="highlighter-rouge">tint($mid-grey, 0.7)</code>, <code class="highlighter-rouge">$red</code>, <code class="highlighter-rouge">rgba(255, 255, 255, 0.5)</code></h5>
-
-<p><code class="highlighter-rouge">color</code> changes the color of the text.</p>
-
-<p>In our code, we have variables corresponding to color values. <a href="#scss-color-variables">SCSS Color Variables</a></p>
-
-<hr />
-
-<h2 id="line-height">line-height</h2>
-
-<h5 id="example-values-12px-30px">EXAMPLE VALUES: <code class="highlighter-rouge">12px</code>, <code class="highlighter-rouge">30px</code></h5>
-
-<p><code class="highlighter-rouge">line-height</code> sets the vertical spacing between lines of text. We mostly use it to vertically center a single line of text. If there is a chance your text might wrap, use a different method as detailed by <a href="https://css-tricks.com/centering-css-complete-guide/">Centering in CSS: A Complete Guide, by CSS Tricks</a></p>
-
-<p>For buttons, we commonly set the line-height to the height of the button to center the text vertically within the button.</p>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.button</span> <span class="p">{</span>
-  <span class="nl">height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-  <span class="nl">line-height</span><span class="p">:</span> <span class="m">30px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<hr />
-
-<h2 id="text-align">text-align</h2>
-
-<h5 id="example-values-center-left">EXAMPLE VALUES: <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">left</code></h5>
-
-<p><code class="highlighter-rouge">text-align</code> is fairly straightforward. It aligns text. <code class="highlighter-rouge">text-align: center;</code> should mostly only be used for text that does not wrap. Center-aligned text that wraps is more difficult to read.</p>
-
-<hr />
-
-<h2 id="font-weight">font-weight</h2>
-
-<h5 id="example-values-normal400-semibold600-bold700">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>/<code class="highlighter-rouge">400</code>, <code class="highlighter-rouge">semibold</code>/<code class="highlighter-rouge">600</code>, <code class="highlighter-rouge">bold</code>/<code class="highlighter-rouge">700</code></h5>
-
-<p><code class="highlighter-rouge">font-weight</code> tells the browser which cut of the given font you want to deliver to the browser. The numbers shown above generally correspond directly to the named weights beside them, though some font makers use different systems. These three are the most common values we use with Source Sans Pro.</p>
-
-<hr />
-
-<h2 id="font-style">font-style</h2>
-
-<h5 id="example-values-normal-italic">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">italic</code></h5>
-
-<p>This attribute is basically used to set the text to italic. You only really need to set it to <code class="highlighter-rouge">normal</code> if you’re overriding the <code class="highlighter-rouge">italic</code>.</p>
-
-<hr />
-
-<h2 id="text-transform">text-transform</h2>
-
-<h5 id="example-values-normal-uppercase">EXAMPLE VALUES: <code class="highlighter-rouge">normal</code>, <code class="highlighter-rouge">uppercase</code></h5>
-
-<p><code class="highlighter-rouge">text-transform</code> will take the formatting of the given text and transform it to your defined value, most commonly to make something uppercase.</p>
-
-<p>Uppercase text can be difficult to read, though, so we often pair this with <code class="highlighter-rouge">font-weight</code> and <code class="highlighter-rouge">letter-spacing</code> to help with that, as seen below.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Shaun Fox<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.name</span> <span class="p">{</span>
-  <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">600</span><span class="p">;</span>
-  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<hr />
-
-<h2 id="letter-spacing">letter-spacing</h2>
-
-<h5 id="example-values-1px-1em">EXAMPLE VALUES: <code class="highlighter-rouge">1px</code>, <code class="highlighter-rouge">1em</code></h5>
-
-<p>This is typically paired with <code class="highlighter-rouge">text-transform</code> as demonstrated above. It should only ever be used on uppercase text. If used with lowercase text, readability is sacrificed.</p>
-
-<hr />
-
-<h2 id="text-decoration">text-decoration</h2>
-
-<h5 id="example-values-none-underline">EXAMPLE VALUES: <code class="highlighter-rouge">none</code>, <code class="highlighter-rouge">underline</code></h5>
-
-<p><code class="highlighter-rouge">text-decoration</code> is most often used to override the default browser styling of anchor tags. Frequently we’ll set the anchor to <code class="highlighter-rouge">text-decoration: none</code>, which removes the underline, but we’ll give it other attributes that help define it as a link. For example:</p>
-
-<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nc">.link</span> <span class="p">{</span>
-  <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="nv">$blue</span><span class="p">;</span>
-
-  <span class="k">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
-  	<span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="nv">$blue</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
-
-<hr />
-
-<h2 id="white-space">white-space</h2>
-
-<h5 id="example-values-nowrap">EXAMPLE VALUES: <code class="highlighter-rouge">nowrap</code></h5>
-
-<p>We primarily use <code class="highlighter-rouge">white-space: nowrap</code> to force text to be one line, without wrapping. Most often used in conjunction with CSS truncation.</p>
+<p>do not do this
+#id
+lots of nesting
+*
+!important</p>
 
 	</div>
 

@@ -12,6 +12,11 @@ categories: CSS
 		<div>Common Values</div>
 	</header>
 	<div class="row">
+		<div><a href="#css-display" data-id="css-display">CSS Selectors</a></div>
+		<div></div>
+		<div><code>.class</code>, <code>block</code>, <code>inline-block</code>, <code>table</code>, <code>none</code></div>
+	</div>
+	<div class="row">
 		<div><a href="#css-display" data-id="css-display">CSS Display</a></div>
 		<div>"Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves." &mdash;CSS Tricks</div>
 		<div><code>inline</code>, <code>block</code>, <code>inline-block</code>, <code>table</code>, <code>none</code></div>
