@@ -12,7 +12,7 @@ categories: CSS
 		<div>Common Values</div>
 	</header>
 	<div class="row">
-		<div><a href="#css-display" data-id="css-display">CSS Selectors</a></div>
+		<div><a href="#css-selectors" data-id="css-display">CSS Selectors</a></div>
 		<div></div>
 		<div><code>.class</code>, <code>block</code>, <code>inline-block</code>, <code>table</code>, <code>none</code></div>
 	</div>

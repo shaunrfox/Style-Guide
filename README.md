@@ -84,7 +84,7 @@ Use an h3 (`### Example`) to make a header for this section.
 
 - ~~General CSS education~~
   - Make overall primer with table (deep-link into sections) (Name, Description, Common Values, Link)
-      - ~~Text Handling~~ ---
+      - ~~Text Handling~~
           - ~~font-size~~
           - ~~font-weight~~
           - ~~line-height~~
@@ -96,20 +96,20 @@ Use an h3 (`### Example`) to make a header for this section.
           - ~~font-style~~
           - ~~color~~
           - ~~whitespace~~
-      - ~~Box Model~~ ---
+      - ~~Box Model~~
           - ~~width~~
           - ~~height~~
           - ~~padding~~
           - ~~margin~~
           - ~~border~~
           - ~~border-radius~~
-      - ~~Display~~ ---
+      - ~~Display~~
           - ~~inline~~
           - ~~block~~
           - ~~inline-block~~
           - ~~table~~
           - ~~none~~
-      - ~~Layout~~ ---
+      - ~~Layout~~
           - ~~position (and top, left, right, bottom)~~
           - ~~float (and clear)~~
           - ~~z-index~~
@@ -117,11 +117,12 @@ Use an h3 (`### Example`) to make a header for this section.
           - ~~transform (and transform-style)~~
       - SVG
           - fill
-      - Psuedo elements ---
-           - content (and psuedo elements)
-           - before
-           - after
-      - Psudoselectors ---
+      - Selectors
+      - ~~Psuedo elements~~
+           - ~~content (and psuedo elements)~~
+           - ~~before~~
+           - ~~after~~
+      - Psudoselectors
           - hover
           - active
           - disabled
